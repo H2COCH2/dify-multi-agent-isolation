@@ -90,9 +90,13 @@
 🛠 技术栈与工程实现
 
 · 工作流编排：Dify（本地部署）
+
 · 底层模型：DeepSeek API
+
 · 后端与接口：Python、FastAPI、Flask
+
 · 前端与交互：Streamlit（最小可运行前端）
+
 · 数据治理：所有 LLM 强制 JSON 输出，Python 代码节点进行清洗、解析与异常兜底，单节点解析失败不影响整体工作流。
 
 ⚠️ 当前局限与反思（MVP 的边界）
@@ -110,7 +114,9 @@
 针对 Dify 的局限性，下一步的核心计划是全面转向 LangGraph 重构：
 
 ☐ 引入 StateGraph 和 Checkpointer，实现多 Agent 的真正的状态同步与持久化
+
 ☐ 利用 Conditional Edges 动态路由 NPC 行动，取消硬编码的回合制限制
+
 ☐ 引入 ChromaDB / 向量数据库，把当前基于代码的标签过滤升级为基于元数据检索的企业级 RAG 权限控制
 
 📦 快速开始
@@ -139,7 +145,9 @@ dify-multi-agent-isolation/
 👤 作者
 
 · GitHub：@H2COCH2
+
 · 简历定位：2027届计算机科学与技术专业，求职方向 AI 应用开发
+
 · 声明：本项目为个人独立架构与开发，用于技术可行性验证与学习交流。
 
 ---
