@@ -1,38 +1,38 @@
 <div align="center">
 
-# 🌍 多智能体隔离：基于本地 Dify 的叙事引擎 MVP
+# 🌍 多智能体协作沙盒：基于本地 Dify 的上下文隔离验证
 
 [![GitHub stars](https://img.shields.io/github/stars/H2COCH2/dify-multi-agent-isolation?style=social)](https://github.com/H2COCH2/dify-multi-agent-isolation)
 [![GitHub license](https://img.shields.io/github/license/H2COCH2/dify-multi-agent-isolation)](https://github.com/H2COCH2/dify-multi-agent-isolation/blob/main/LICENSE)
 [![Dify](https://img.shields.io/badge/Platform-Dify-blue)](https://dify.ai)
 [![Python](https://img.shields.io/badge/Language-Python-3.10+-green)](https://www.python.org)
 
-> **一个基于本地部署 Dify 的多 Agent 协作叙事引擎可行性验证项目。**
-> 核心目标是解决单 Agent 架构下多角色场景的“信息隔离失效”（即 NPC 出现“上帝视角”）问题。
+> 一个用于验证「多 Agent 协作」、「上下文越权控制」与「状态管理」的本地沙盒实验项目。
+> 业务表象是多角色叙事，核心底层是解决多 Agent 系统普遍存在的信息隔离与状态同步难题。
 
 </div>
 
 ---
 
-## 📖 项目背景
+## 📖 项目背景与初衷
 
-在体验了市面上对标 SillyTavern（酒馆）的 AI 文字角色扮演产品后，我发现单 Agent 架构驾驭宏大叙事时存在一个致命问题：**NPC 会拥有上帝视角**。
+在构建多 Agent 系统时，我发现一个致命的工程缺陷：**单 Agent 架构无法在代码层面实现真正的“信息隔离”。**
 
-一个 LLM 既要扮演 A 角色，又要扮演 B 角色，它必然会读取到所有上下文，导致 B 角色知道了 A 角色的内心戏，或者 NPC 知道了玩家尚未公开的隐秘行动。为了验证多角色信息隔离的可行性，我选择在本地 Dify 上快速搭建了一个 MVP。它虽然受限于 Dify 的能力，只能像回合制游戏一样按顺序推进，但**完美验证了动态上下文路由、代码层标签过滤和结构化输出容错三项核心机制**。
+以开源社区 `SillyTavern`（基于大语言模型的多角色文字交互产品）等场景为例，如果用一个 LLM 同时扮演多个角色，它会读取全量上下文，导致角色 B 不可避免地知道了角色 A 的内心戏，或者知道了用户尚未公开的隐秘行动。这就是典型的**上下文越权（Context Privilege Escalation）**——也就是俗称的“上帝视角”。
 
-## 📌 项目演进：从单 Agent 到多 Agent
+为了在极端场景下测试“标签隔离 + 状态路由”是否可行，我选择了一个**多角色交互叙事**的业务形态作为沙盒。因为在这个场景里，信息不对称是核心机制，谁在什么时间知道什么信息，决定了整个系统逻辑能否自洽。
 
-本项目并非一蹴而就，而是经历了明确的架构演进：
+## 🧬 项目演进：从单 Agent 到多 Agent
+
+本项目并非一蹴而就，而是经历了明确的架构演进，这也是我技术思考的完整记录：
 
 *   **第一阶段：单 Agent 提示词引擎（探索期）**
-    最初，我尝试用极度复杂的单 Agent 提示词来实现多角色叙事。
-    *   **V1 版本**（重规则）：定义了严格的优先级仲裁、双段自检、知悉库与数值模型（[查看 `prompt-v1-strict-rules.md`](docs/prompts/prompt-v1-strict-rules.md)）。
-    *   **V2 版本**（重思维链）：引入“底噪清除令”与强制第一人称视角，大幅提升沉浸感（[查看 `prompt-v2-cot-injection.md`](docs/prompts/prompt-v2-cot-injection.md)）。
-    *   **瓶颈**：随着规则复杂度上升，单 Agent 出现规则冲突、遗忘，且“上帝视角”无法从根本上在代码层被隔离。
+    最初，我尝试用极度复杂的单 Agent 提示词来做上下文控制。
+    *   **V1 版本**（重规则）：定义了严格的优先级仲裁、双段自检、知悉库与数值模型（[查看 `v1-single-agent-context-rules.md`](docs/prompts/v1-single-agent-context-rules.md)）。
+    *   **V2 版本**（重思维链）：引入“底噪清除令”与强制第一人称视角，大幅提升沉浸感（[查看 `v2-single-agent-cot.md`](docs/prompts/v2-single-agent-cot.md)）。
+    *   **瓶颈**：随着规则复杂度上升，单 Agent 出现规则冲突、遗忘，**且“上下文越权”问题无法在代码层被彻底隔离**。
 *   **第二阶段：多 Agent 架构（重构期）**
     为彻底解决上述问题，将架构重构为多 Agent 协同（Dify 工作流）。把原本由单 Agent 承担的全部职责，拆分为 6 类独立 Agent 节点，并引入 **Python 代码层**进行标签过滤与动态上下文路由，从数据源头切断越权信息的获取。
-
-> 注：单 Agent 的详细设计文档已被完整保留在仓库中，作为这段技术探索的真实记录。
 
 ## 🧠 核心架构（6 类 Agent 分工）
 
