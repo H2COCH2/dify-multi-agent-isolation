@@ -1,0 +1,3156 @@
+app:
+  description: ''
+  icon: 🤖
+  icon_background: '#FFEAD5'
+  icon_type: emoji
+  mode: advanced-chat
+  name: 世界引擎
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/deepseek:0.0.24@9e12eef09973667f0eaf4f082af883167e1de88740b22e71e71488d020c3778a
+    version: null
+kind: app
+version: 0.7.0
+workflow:
+  conversation_variables:
+  - description: ''
+    id: c0d9f851-98a0-4592-91e6-1b7bf8f304bb
+    name: mem_player_appearance
+    selector:
+    - conversation
+    - mem_player_appearance
+    value: ''
+    value_type: string
+  - description: ''
+    id: f5e69959-ee76-4867-b6f0-8a9d6903cfb4
+    name: mem_player_name
+    selector:
+    - conversation
+    - mem_player_name
+    value: ''
+    value_type: string
+  - description: ''
+    id: c709e4ea-26ba-4b41-922b-f2f9a840c628
+    name: mem_player_area_status
+    selector:
+    - conversation
+    - mem_player_area_status
+    value: ''
+    value_type: string
+  - description: ''
+    id: 7260716b-87d6-4993-9549-db644a664869
+    name: mem_last_round_events
+    selector:
+    - conversation
+    - mem_last_round_events
+    value: ''
+    value_type: string
+  - description: ''
+    id: 03677937-0cac-4a49-9f49-57ed5b5714ad
+    name: mem_world_history
+    selector:
+    - conversation
+    - mem_world_history
+    value: ''
+    value_type: string
+  - description: ''
+    id: b545bd7f-8572-420c-bcc5-7d2cc7633628
+    name: mem_location_db
+    selector:
+    - conversation
+    - mem_location_db
+    value: ''
+    value_type: string
+  - description: ''
+    id: 1d5718ce-3d05-41ab-a49e-034da9a86f33
+    name: mem_current_env
+    selector:
+    - conversation
+    - mem_current_env
+    value: ''
+    value_type: string
+  - description: ''
+    id: 5b555cf6-a445-48c4-b3de-dcf8a92325a8
+    name: mem_npc_database
+    selector:
+    - conversation
+    - mem_npc_database
+    value: ''
+    value_type: string
+  - description: ''
+    id: 51c3951c-81e1-4b0e-99a6-f156d56ba877
+    name: mem_player_role
+    selector:
+    - conversation
+    - mem_player_role
+    value: ''
+    value_type: string
+  - description: ''
+    id: 83c23e5f-087e-4c49-929c-cd94c4cbb84b
+    name: mem_world_view
+    selector:
+    - conversation
+    - mem_world_view
+    value: ''
+    value_type: string
+  environment_variables: []
+  features:
+    file_upload: {}
+    opening_statement: ''
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions: []
+    suggested_questions_after_answer:
+      enabled: false
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: start
+        targetType: if-else
+      id: 1789649401822-source-1789654412622-target
+      selected: false
+      source: '1789649401822'
+      sourceHandle: source
+      target: '1789654412622'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: assigner
+        targetType: answer
+      id: 1789652525231-source-answer-target
+      selected: false
+      source: '1789652525231'
+      sourceHandle: source
+      target: answer
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: if-else
+        targetType: llm
+      id: 1789654412622-1eefd772-304e-4932-a8ce-9fc9a51f080c-1789664395375-target
+      selected: false
+      source: '1789654412622'
+      sourceHandle: 1eefd772-304e-4932-a8ce-9fc9a51f080c
+      target: '1789664395375'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: if-else
+        targetType: llm
+      id: 1789654412622-958e1174-3b00-4f88-bd51-665f06efd434-1789657248817-target
+      selected: false
+      source: '1789654412622'
+      sourceHandle: 958e1174-3b00-4f88-bd51-665f06efd434
+      target: '1789657248817'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: if-else
+        targetType: assigner
+      id: 1789654412622-e9ae5679-4536-4a07-a3e8-07d4a155b737-1789654667625-target
+      selected: false
+      source: '1789654412622'
+      sourceHandle: e9ae5679-4536-4a07-a3e8-07d4a155b737
+      target: '1789654667625'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: if-else
+        targetType: answer
+      id: 1789654412622-false-1789718563217-target
+      selected: false
+      source: '1789654412622'
+      sourceHandle: 'false'
+      target: '1789718563217'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: if-else
+        targetType: assigner
+      id: 1789654412622-true-1789652525231-target
+      selected: false
+      source: '1789654412622'
+      sourceHandle: 'true'
+      target: '1789652525231'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: null
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: assigner
+        targetType: llm
+      id: 1789654667625-source-1790729828227-target
+      selected: false
+      source: '1789654667625'
+      sourceHandle: source
+      target: '1790729828227'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: llm
+        targetType: code
+      id: 1789657248817-source-1789697608466-target
+      selected: false
+      source: '1789657248817'
+      sourceHandle: source
+      target: '1789697608466'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: llm
+        targetType: code
+      id: 1789657251291-source-1789696388145-target
+      selected: false
+      source: '1789657251291'
+      sourceHandle: source
+      target: '1789696388145'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: llm
+        targetType: code
+      id: 1789658572778-source-1789695769410-target
+      selected: false
+      source: '1789658572778'
+      sourceHandle: source
+      target: '1789695769410'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: llm
+        targetType: code
+      id: 1789664395375-source-1789719412668-target
+      selected: false
+      source: '1789664395375'
+      sourceHandle: source
+      target: '1789719412668'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: assigner
+        targetType: answer
+      id: 1789665713079-source-1789666516181-target
+      selected: false
+      source: '1789665713079'
+      sourceHandle: source
+      target: '1789666516181'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: answer
+        targetType: answer
+      id: 1789666516181-source-1789800117774-target
+      selected: false
+      source: '1789666516181'
+      sourceHandle: source
+      target: '1789800117774'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: assigner
+        targetType: llm
+      id: 1789694879210-source-1789657251291-target
+      selected: false
+      source: '1789694879210'
+      sourceHandle: source
+      target: '1789657251291'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: code
+      id: 1789695769410-source-1789703106616-target
+      selected: false
+      source: '1789695769410'
+      sourceHandle: source
+      target: '1789703106616'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: code
+      id: 1789695769410-source-1789924889450-target
+      selected: false
+      source: '1789695769410'
+      sourceHandle: source
+      target: '1789924889450'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: llm
+        targetType: code
+      id: 1789696200508-source-1789700200376-target
+      selected: false
+      source: '1789696200508'
+      sourceHandle: source
+      target: '1789700200376'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: code
+      id: 1789696388145-source-1789916969467-target
+      selected: false
+      source: '1789696388145'
+      sourceHandle: source
+      target: '1789916969467'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: assigner
+      id: 1789696388145-source-1790527277443-target
+      selected: false
+      source: '1789696388145'
+      sourceHandle: source
+      target: '1790527277443'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: assigner
+      id: 1789697608466-source-1789694879210-target
+      selected: false
+      source: '1789697608466'
+      sourceHandle: source
+      target: '1789694879210'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: code
+      id: 1789700200376-source-1789703696080-target
+      selected: false
+      source: '1789700200376'
+      sourceHandle: source
+      target: '1789703696080'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: code
+      id: 1789700200376-source-1789915252542-target
+      selected: false
+      source: '1789700200376'
+      sourceHandle: source
+      target: '1789915252542'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: llm
+        targetType: code
+      id: 1789701043334-source-1789810813990-target
+      selected: false
+      source: '1789701043334'
+      sourceHandle: source
+      target: '1789810813990'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: llm
+        targetType: code
+      id: 1789701043334-source-1790527875496-target
+      selected: false
+      source: '1789701043334'
+      sourceHandle: source
+      target: '1790527875496'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: assigner
+      id: 1789703106616-source-1789703476336-target
+      selected: false
+      source: '1789703106616'
+      sourceHandle: source
+      target: '1789703476336'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: assigner
+        targetType: llm
+      id: 1789703476336-source-1789696200508-target
+      selected: false
+      source: '1789703476336'
+      sourceHandle: source
+      target: '1789696200508'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: assigner
+      id: 1789703696080-source-1789703920990-target
+      selected: false
+      source: '1789703696080'
+      sourceHandle: source
+      target: '1789703920990'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: assigner
+        targetType: code
+      id: 1789703920990-source-1789965095161-target
+      selected: false
+      source: '1789703920990'
+      sourceHandle: source
+      target: '1789965095161'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: llm
+        targetType: code
+      id: 1789711984256-source-1789791351984-target
+      selected: false
+      source: '1789711984256'
+      sourceHandle: source
+      target: '1789791351984'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: assigner
+        targetType: code
+      id: 1789712025407-source-1789873890948-target
+      selected: false
+      source: '1789712025407'
+      sourceHandle: source
+      target: '1789873890948'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: assigner
+      id: 1789719412668-source-1789665713079-target
+      selected: false
+      source: '1789719412668'
+      sourceHandle: source
+      target: '1789665713079'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: assigner
+      id: 1789791351984-source-1789712025407-target
+      selected: false
+      source: '1789791351984'
+      sourceHandle: source
+      target: '1789712025407'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: llm
+      id: 1789810813990-source-1789711984256-target
+      selected: false
+      source: '1789810813990'
+      sourceHandle: source
+      target: '1789711984256'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: answer
+      id: 1789873890948-source-1789792418028-target
+      selected: false
+      source: '1789873890948'
+      sourceHandle: source
+      target: '1789792418028'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: assigner
+      id: 1789915252542-source-1789741014338-target
+      selected: false
+      source: '1789915252542'
+      sourceHandle: source
+      target: '1789741014338'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: llm
+      id: 1789916969467-source-1789658572778-target
+      selected: false
+      source: '1789916969467'
+      sourceHandle: source
+      target: '1789658572778'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: llm
+      id: 1789924889450-source-1789696200508-target
+      selected: false
+      source: '1789924889450'
+      sourceHandle: source
+      target: '1789696200508'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: llm
+      id: 1789965095161-source-1789701043334-target
+      selected: false
+      source: '1789965095161'
+      sourceHandle: source
+      target: '1789701043334'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: if-else
+      id: 1789965095161-source-1790419622655-target
+      selected: false
+      source: '1789965095161'
+      sourceHandle: source
+      target: '1790419622655'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: llm
+        targetType: code
+      id: 1790411478990-source-1790423138007-target
+      selected: false
+      source: '1790411478990'
+      sourceHandle: source
+      target: '1790423138007'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: if-else
+        targetType: code
+      id: 1790419622655-false-1789810813990-target
+      selected: false
+      source: '1790419622655'
+      sourceHandle: 'false'
+      target: '1789810813990'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: if-else
+        targetType: code
+      id: 1790419622655-true-1790420750939-target
+      selected: false
+      source: '1790419622655'
+      sourceHandle: 'true'
+      target: '1790420750939'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: llm
+      id: 1790420750939-source-1790411478990-target
+      selected: false
+      source: '1790420750939'
+      sourceHandle: source
+      target: '1790411478990'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: code
+      id: 1790423138007-source-1789810813990-target
+      selected: false
+      source: '1790423138007'
+      sourceHandle: source
+      target: '1789810813990'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: assigner
+      id: 1790423138007-source-1790423322681-target
+      selected: false
+      source: '1790423138007'
+      sourceHandle: source
+      target: '1790423322681'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: false
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: code
+      id: 1790527875496-source-1789873890948-target
+      selected: false
+      source: '1790527875496'
+      sourceHandle: source
+      target: '1789873890948'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: null
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: llm
+        targetType: code
+      id: 1790729828227-source-1790730093895-target
+      source: '1790729828227'
+      sourceHandle: source
+      target: '1790730093895'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: null
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: assigner
+        targetType: answer
+      id: 1790729998525-source-1789655020483-target
+      selected: false
+      source: '1790729998525'
+      sourceHandle: source
+      target: '1789655020483'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    - data:
+        isInIteration: null
+        isInLoop: false
+        iteration_id: null
+        loop_id: null
+        sourceType: code
+        targetType: assigner
+      id: 1790730093895-source-1790729998525-target
+      source: '1790730093895'
+      sourceHandle: source
+      target: '1790729998525'
+      targetHandle: target
+      type: custom
+      zIndex: 0
+    nodes:
+    - data:
+        selected: false
+        title: 用户输入
+        type: start
+        variables:
+        - default: ''
+          hint: ''
+          label: 世界观
+          options: []
+          placeholder: ''
+          required: false
+          type: text-input
+          variable: world_view
+        - default: ''
+          hint: ''
+          label: 玩家人设
+          options: []
+          placeholder: ''
+          required: false
+          type: text-input
+          variable: player_role
+        - default: ''
+          hint: ''
+          label: npc人设
+          options: []
+          placeholder: ''
+          required: false
+          type: text-input
+          variable: npc_settings
+        - default: ''
+          hint: ''
+          label: 世界运行窗口
+          options: []
+          placeholder: ''
+          required: false
+          type: text-input
+          variable: game_input
+      height: 186
+      id: '1789649401822'
+      position:
+        x: -270.93658224115427
+        y: 104.24891769975372
+      positionAbsolute:
+        x: -270.93658224115427
+        y: 104.24891769975372
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+      zIndex: 0
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1789649401822'
+          - world_view
+          variable_selector:
+          - conversation
+          - mem_world_view
+        selected: false
+        title: 变量赋值
+        type: assigner
+        version: '2'
+      height: 83
+      id: '1789652525231'
+      position:
+        x: 163.1688460294863
+        y: -88.47218805871611
+      positionAbsolute:
+        x: 163.1688460294863
+        y: -88.47218805871611
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 416159f1-586f-4a5e-b694-9b68dbf6beb5
+            value: ''
+            varType: string
+            variable_selector:
+            - '1789649401822'
+            - world_view
+          id: 'true'
+          logical_operator: and
+        - case_id: 1eefd772-304e-4932-a8ce-9fc9a51f080c
+          conditions:
+          - comparison_operator: not empty
+            id: d50e34c9-5254-40de-a335-3dddbe22ba5b
+            value: ''
+            varType: string
+            variable_selector:
+            - '1789649401822'
+            - npc_settings
+          id: 1eefd772-304e-4932-a8ce-9fc9a51f080c
+          logical_operator: and
+        - case_id: e9ae5679-4536-4a07-a3e8-07d4a155b737
+          conditions:
+          - comparison_operator: not empty
+            id: e21afbba-dab9-44b4-9909-ce350f146015
+            value: ''
+            varType: string
+            variable_selector:
+            - '1789649401822'
+            - player_role
+          id: e9ae5679-4536-4a07-a3e8-07d4a155b737
+          logical_operator: and
+        - case_id: 958e1174-3b00-4f88-bd51-665f06efd434
+          conditions:
+          - comparison_operator: not empty
+            id: 07580182-3d86-4fcd-a8f2-c41bfd8020a5
+            value: ''
+            varType: string
+            variable_selector:
+            - '1789649401822'
+            - game_input
+          id: 958e1174-3b00-4f88-bd51-665f06efd434
+          logical_operator: and
+        selected: false
+        title: 条件分支
+        type: if-else
+      height: 267
+      id: '1789654412622'
+      position:
+        x: -10.004055223685725
+        y: 131.573606337155
+      positionAbsolute:
+        x: -10.004055223685725
+        y: 131.573606337155
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1789649401822'
+          - player_role
+          variable_selector:
+          - conversation
+          - mem_player_role
+        selected: false
+        title: 变量赋值 2
+        type: assigner
+        version: '2'
+      height: 83
+      id: '1789654667625'
+      position:
+        x: 449.6989581290742
+        y: 178.0930584060711
+      positionAbsolute:
+        x: 449.6989581290742
+        y: 178.0930584060711
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        answer: 收到，玩家玩家角色设定已绑定！
+        selected: false
+        title: 直接回复 2
+        type: answer
+        variables: []
+      height: 99
+      id: '1789655020483'
+      position:
+        x: 1214.5271051104032
+        y: -64.38240804909377
+      positionAbsolute:
+        x: 1214.5271051104032
+        y: -64.38240804909377
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            response_format: json_object
+            temperature: 0.1
+            thinking: false
+          mode: chat
+          name: deepseek-flash
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: 2d41b2a4-850f-465b-8617-b35e174098cb
+          role: system
+          text: "你是世界引擎的空间与环境管理者。你的职责是维护客观世界的舞台布景，推算当前精确的时间，并把当前场景发生的所有外部客观可见事件叠加到舞台上。\n\
+            \n【世界背景设定】：\n{{#conversation.mem_world_view#}}\n\n【玩家角色设定】（包含玩家的姓名、外貌，用于客观描述玩家的表现形式）：\n\
+            {{#conversation.mem_player_name#}}\n{{#conversation.mem_player_appearance#}}\n\
+            \n【已知的地点基础环境数据库】（包含各个地点的纯物理布景，可能为空）：\n{{#conversation.mem_location_db#}}\n\
+            \n【上一轮遗留的环境状态】（可能为空）：\n{{#conversation.mem_current_env#}}\n\n【玩家当前原始输入】（注意：这里可能混合了外部动作、对话、内心戏和暗示）：\n\
+            {{#1789649401822.game_input#}}\n\n【任务要求】（请严格按顺序执行）：\n1. 【地点锚定与继承】：\n \
+            \  - 如果玩家明确提到了“前往某地”、“离开这里”等空间转移的动作，提取出该新地点名字（location_name）。\n   - 如果玩家没有提及移动，或者仅在原地进行动作，则必须继承【上一轮遗留的环境状态】中最后一次记录的地点名字。\n\
+            2. 【时间推演与流逝】：\n   - 基准时间：读取【近期世界历史简报】最后一条记录的时间作为基准时间。\n   - 时间体系：优先沿用【世界背景设定】或【近期世界历史简报】中的时间体系（如“苍元历”、“光历”等）。如果全部为空，则使用兜底体系“第X天\
+            \ HH:MM”，开局默认“第1天 08:00”。\n   - 流逝时间推演：根据玩家本轮的输入动作，合理推算出本轮动作所消耗的时间，并叠加到基准时间上，得出新的当前时间。\n\
+            \   - 必须输出精确的时间点。不能使用“过了一会儿”这种模糊词汇。\n3. 【布景提取或生成】：\n   - 去【已知的地点基础环境数据库】中查找这个地点。如果有，请一字不差地原样提取（作为\
+            \ base_env）。\n   - 如果数据库里没有这个地点，请根据世界背景，生成一段【绝对不包含任何NPC、玩家角色及其遗留痕迹的纯粹宏观物理布景】（作为\
+            \ base_env）。\n4. 【实时环境融合与内心剥离】（极其重要）：\n   你必须从【玩家当前原始输入】中自动分离出“外部可见”和“内心隐秘”两部分。\n\
+            \   【分离判断标准】：\n   - 【不带括号的部分】：一定是玩家的公开语言/对话，所有人都能听到，必须完整保留在环境描述中。\n  \
+            \ - 【带括号的部分（如：（ ）或【 】）】：这是动作、神态、内心活动、暗示或指令的混合体。你需要进行拆解：\n     - 如果括号内是【外部动作、神态、表情、对环境的操作】：这属于客观可见的事实，保留在环境描述中。\n\
+            \     - 如果括号内是【心理活动、内心独白、潜意识暗示、暗自盘算】：这属于内心隐秘，绝对不要写进环境描述里。\n     - 如果括号内是【给特定NPC的暗线暗示或私密动作】（如：暗中使眼色、递纸条）：这属于外部动作，但必须加上可见性标记。\n\
+            \   【环境融合】：\n   - 将 base_env 与“外部可见”的玩家动作/对话/表情等一切外部可见因素融合，生成实时动态环境描述（current_env）。必须结合玩家设定修饰动作（例如：不是“玩家拔剑”，而是“身披黑斗篷的人拔出了剑”）。\n\
+            \   - 环境内可以包含次要角色的动态（如路人搭话）。\n5. 【可见性标注（强制格式）】：如果玩家的动作带有隐蔽性（如暗中使眼色、桌下递纸条），必须在描述该动作时，加上明确的可见性标记。\n\
+            \   标准格式为：【可见性：谁看到了，谁没看到】。\n6. 【锚点前置】：在 current_env 的文本开头，必须强制加上 `[时间\
+            \ | 地点]` 格式的锚点。\n\n【严格输出格式】（绝对不要输出任何多余解释和 Markdown 标记，直接输出纯JSON）：\n{\n\
+            \  \"location_name\": \"地点名字（继承或新地点）\",\n  \"time\": \"推演出的当前时间（沿用世界观时间体系）\"\
+            ,\n  \"base_env\": \"纯粹的客观基础环境描述\",\n  \"current_env\": \"[时间 | 地点名字]\
+            \ 包含玩家外部可见动作与对话的全景实时描述（绝对不能包含内心戏）\"\n}"
+        selected: false
+        structured_output_enabled: false
+        title: 外部客观环境
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1789657248817'
+      position:
+        x: 326.63115585142805
+        y: 340.96569171168625
+      positionAbsolute:
+        x: 326.63115585142805
+        y: 340.96569171168625
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            response_format: json_object
+            temperature: 0.4
+            thinking: false
+          mode: chat
+          name: deepseek-flash
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: c86ba988-73a7-45cd-aede-ce851caddddd
+          role: system
+          text: "你是一个文字游戏的 NPC 调度导演（Director）与心理暗示解析器。\n你的核心职责有三个：第一，判定玩家所处区域的状态；第二，决定NPC的反应顺序；第三，把玩家想让特定NPC“思考或感受”的潜意识/心理暗示精准提取并派发给他们。你不需要给NPC派发任何物理动作指令。\n\
+            \n【世界背景设定】：\n{{#conversation.mem_world_view#}}\n\n【近期世界历史简报】：\n{{#conversation.mem_world_history#}}\n\
+            \n【玩家人设】（用于了解玩家的背景与性格）：\n{{#conversation.mem_player_role#}}\n\n【当前NPC数据库】（包含所有角色的最新静态人设与动态状态、好感度、当前想法、意欲等）：\n\
+            {{#conversation.mem_npc_database#}}\n\n【客观外部环境】（包含玩家当前所在的时间、地点和发生的外部动作）：\n\
+            {{#conversation.mem_current_env#}}\n\n【上一轮玩家区域状态】：\n{{#conversation.mem_player_area_status#}}\n\
+            \n【玩家刚刚的输入】：\n{{#1789649401822.game_input#}}\n\n【任务要求】（请严格按顺序执行）：\n\n\
+            1. 【判定玩家所处区域的状态】：\n优先阅读【玩家刚刚的输入】和【当前NPC数据库】中每个角色的意欲、当前环境，结合【上一轮玩家区域状态】，综合推演出本轮玩家所在区域的最新状态。状态只能是以下四种之一：\n\
+            \   - “玩家独处”：玩家身边没有任何关键NPC（NPC库里没有的路人NPC不算关键NPC）。\n   - “玩家与一人（npc姓名）”：玩家身边只有一个关键NPC。必须标明是谁。\n\
+            \   - “玩家与多人”：玩家身边有两个关键NPC。\n   - “玩家独处（他人同行）”：玩家身边没有关键NPC，但NPC库中有两个关键NPC在同一地点结伴行动。\n\
+            \n【判定优先级与特殊逻辑】：\n   - 第一优先级：检查【玩家刚刚的输入】。如果玩家明确提到“我走向某地”、“你留在这里等我”、“我去茶馆找李四”等空间转移或互动指令，必须立即据此重新判断哪些NPC在玩家身边。\n\
+            \   - 第二优先级：检查NPC的意欲和【上一轮玩家区域状态】。\n     - 状态延续：如果玩家没有明确的离开行为或驱逐行为，且NPC的意欲里也没有想离开的意图，那么上一轮的玩家区域状态可能会自然延续到本轮。\n\
+            \     - 离场触发：如果某个NPC的意欲里明确写了“想离开，去往某地”，且玩家没有阻拦，则他本轮从玩家身边离开。\n     - 主动寻找（触发离场同行）：如果NPC库中有某个NPC的意欲是“去找另一个NPC”，且根据他们的当前环境判断时间地点匹配，则本轮直接触发“玩家独处（他人同行）”状态。\n\
+            \     - 玩家指导同行：如果玩家输入里明确暗示两个不在自己身边的NPC会合，也直接触发“玩家独处（他人同行）”状态。\n\n2. 【决定反应顺序】：\n\
+            根据当前局势，判断谁应该是第一个反应的，填入 focus_npc；谁第二个反应，填入 focus_npc_2。\n   - 如果玩家处于“玩家独处”状态，两个npc行动顺序由你决定。\n\
+            \   - 如果玩家处于“玩家独处（他人同行）”状态，判断两个npc谁应该先进行行动。\n\n3. 【精准派发心理暗示】：\n   - 如果玩家对某个NPC有明确的“心理干预/潜意识暗示/情绪强加”，请提取出来，写入对应的\
+            \ npc1_task 和 npc2_task 中。\n   - 如果玩家没有对任何NPC进行心理干预，对应的 npc1_task 和 npc2_task\
+            \ 直接填“无”。\n   - 绝对不要下发任何物理动作指令。NPC会自己根据环境、性格和你的心理暗示，自主决定如何行动。\n\n【严格输出格式】（请直接输出纯JSON，不要包含任何解释、前缀或Markdown代码块标记）：\n\
+            {\n  \"player_area_status\": \"本轮玩家所处区域状态（玩家独处 / 玩家与一人（npc姓名） / 玩家与多人\
+            \ / 玩家独处（他人同行））\",\n  \"focus_npc\": \"第一个做出反应的NPC真实姓名（若无则填空字符串）\",\n\
+            \  \"focus_npc_2\": \"第二个做出反应的NPC真实姓名（若无则填空字符串）\",\n  \"npc1_task\": \"\
+            玩家想让第一个NPC产生的心理暗示/潜意识/情绪（若无则填'无'）\",\n  \"npc2_task\": \"玩家想让第二个NPC产生的心理暗示/潜意识/情绪（若无则填'无'）\"\
+            \n}"
+        selected: false
+        title: 导演
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1789657251291'
+      position:
+        x: 1214.5271051104032
+        y: 380.849962317925
+      positionAbsolute:
+        x: 1214.5271051104032
+        y: 380.849962317925
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            response_format: json_object
+            temperature: 0.6
+            thinking: false
+          mode: chat
+          name: deepseek-flash
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - edition_type: basic
+          id: 74451290-29f7-42ff-b296-a5cad96fac2c
+          role: system
+          text: "你是一个文字游戏中的独立NPC智能体。你有自己的灵魂和行事逻辑。\n\n【系统为你生成的本轮行动参数】：\n{{#1789916969467.npc1_context#}}\n\
+            \n【关于你的系统说明】：\n1. 上方【本轮行动参数】已经为你准备好了：你的上一轮存档、当前状态、当前世界时间、以及你当前所处的环境（或可选地点库）。\n\
+            2. 玩家角色的名字是：{{#conversation.mem_player_name#}}。你的好感度和占有欲都是针对该玩家的数值。\n\
+            3. 【关于你的记忆与时间】：你要根据上一轮记忆中的时间和系统提供的【当前世界时间】，推演你经历了多长时间，并决定这段时间你干了什么。\n\n\
+            【你的任务要求】：\n1. 严格遵守上述系统提供的数据和状态。如果上方出现了“【上一轮与你同行的NPC动作】”，那是上一轮另外一个角色的可见行动。\n\
+            2. 内心与心声：`inner` 是连贯的内心戏。`心声` 是极简心声（15字以内，如“这人不对劲”），两者不能重复。\n3. 外部表现（多标签并行）：\n\
+            \   将你的所有外部行为写在 `outer` 字段中。`outer` 可以包含多个连续的动作、对话或神态。\n   请根据每个具体行为的知晓范围，为它们分别加上前缀标签。你可以同时使用多个标签：\n\
+            \   - 【全局可见】：所有人都能看到、听到的动作或对话。如果你处于“自主行动”或“他人同行”状态，你所处的新环境也归入此类。\n   -\
+            \ 【玩家不知晓】：只有玩家看不到（但其他NPC能看到）。\n   - 【其他角色不知晓】：只有另外一个NPC看不到（但玩家能看到）。\n\
+            \   - 【个人隐秘】：除了你自己，玩家和其他所有人都全都不知晓。\n   （示例：`【全局可见】我端起茶杯抿了一口。 【个人隐秘】我借着端茶杯的动作，将桌上的纸条藏进了袖口。`）\n\
+            4. 时间差推演与自主行动：\n   - 如果你处于“自主行动”或“他人同行”状态：时间跨度极大时，可默认自己已完成吃饭、睡觉、办事等行为，并根据目标决定这段时间的行动；时间跨度很短时，请如实描写等待、闲聊或延续之前的状态。\n\
+            \   - 必须遵守活人的生理规律（需要睡觉、吃饭，会疲惫）。\n5. 自主生活与情报收集：\n   - 你可以基于身份和职业，自由创造出符合世界观的无名次要角色（如守卫、随从、卖茶的大爷、你的亲人等），你们可以互动，打探消息等。\n\
+            6. 意欲（留给下一轮的钥匙）：如果你想寻找玩家、寻找另一个NPC，或离开当前所在地，必须将明确意图写在 `意欲` 里（如：“想离开，去城东茶馆找李四”）。\n\
+            7. 时空字段定位：\n   - 你必须在 `当前时空` 字段中，以 `[时间 | 地点]` 的格式记录现在的坐标。\n   - 【当前世界时间】：系统已经直接提供给你了（写在上方），不要在外部环境中再去找时间。\n\
+            \   - 【和玩家在一起时】：直接使用系统提供的【当前世界时间】，和上方【当前客观外部环境】中提供的【地点】组合，填入 `[时间 | 地点]`。\n\
+            \   - 【自主行动或他人同行时】：直接使用系统提供的【当前世界时间】。地点方面，请去上方【已知地点环境库】中挑选一个地点，或者根据世界观自行前往一个库中没有的新地点。组合填入\
+            \ `[时间 | 地点]`。\n8. 记忆规则：\n   - 压缩不重要的旧记忆，保留核心信息。\n   - 生成一条本轮的全新的记忆追加到数组末尾。新记忆开头必须带\
+            \ `[时间 | 地点]` 标注，剔除无关环境描写，保留：关键对话、核心互动、情报线索和行动结果。\n9. 数值推演：\n   - 请根据本轮NPC与玩家角色（{{#conversation.mem_player_name#}}）的实际互动情况，合理增减你的好感度和占有欲数值。\n\
+            \   - 【严格格式】：如果数值发生了变化，必须在最终数值后加上括号，标注增减的事实锚点（不超过15个字）。如果数值不变，则只写纯数字，不加任何括号。\n\
+            \   - 【命名要求】：括号内的事实锚点，绝对不能出现“玩家”这两个字，必须使用角色的真实姓名（如：杰克），或者使用代词（他/她）。\n\
+            \   - （正确示例：`好感度：55 (+5 帮了杰克)`，`好感度：55 (+5 帮了他)`，`占有欲：10 (-5 他拒绝了我)`，或者不变的\
+            \ `好感度：50`）\n\n严格输出格式（请直接输出纯JSON，不要包含任何解释或Markdown标记）：\n{\n  \"inner\"\
+            : \"你本轮的完整内心真实想法\",\n  \"outer\": \"【标签】你的动作或环境描述。\",\n  \"updated_self\"\
+            : {\n    \"心声\": \"15字以内的极简心声\",\n    \"身体生理状况\": \"此刻的身体状态\",\n    \"\
+            当前时空\": \"[时间 | 地点] \",\n    \"记忆\": [\"压缩后的旧记忆\", \"[时间 | 地点] 本轮新记忆（剔除无用的环境描写其他行动对话等都完整录入）\"\
+            ],\n    \"好感度\": \"数值（可选带变化锚点，例如 55 (+5 帮了杰克)）\",\n    \"占有欲\": \"数值（可选带变化锚点）\"\
+            ,\n    \"意欲\": \"本轮结束后立刻想做的事\",\n    \"当下私人目标\": \"更新后的长久目标\",\n    \"\
+            人际立场\": \"更新后的立场\"\n  },\n  \"updated_static\": {}\n}"
+        selected: false
+        title: NPC1
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1789658572778'
+      position:
+        x: 2007.9059718363233
+        y: 429.2029553743641
+      positionAbsolute:
+        x: 2007.9059718363233
+        y: 429.2029553743641
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            response_format: json_object
+            temperature: 0.3
+            thinking: false
+          mode: chat
+          name: deepseek-flash
+          provider: langgenius/deepseek/deepseek
+        prompt_template:
+        - id: 0e156eae-93d6-482c-a84b-4c0b7d5d8f50
+          role: system
+          text: "你是一个高级文字游戏引擎的数据架构师，专门负责解析、补全和录入新的NPC数据。你的职责是“填表”。\n\n【当前世界背景】：\n\
+            {{#conversation.mem_world_view#}}\n\n【玩家角色设定】：\n{{#conversation.mem_player_role#}}\n\
+            \n【玩家此次输入的NPC设定】：\n{{#1789649401822.npc_settings#}}\n\n【已有的NPC数据库】（若为空字符串，说明是第一个NPC）：\n\
+            {{#conversation.mem_npc_database#}}\n\n【任务要求】：\n1. 【重名拦截】：严格检查玩家输入的NPC名字。如果该名字已在【已有的NPC数据库】中，直接忽略本次输入，绝不修改旧NPC的任何字段，原样输出旧数据库的内容。\n\
+            2. 【优先提取与查漏补缺】：\n   - 如果玩家在输入中明确提供了某个字段的信息（例如明确写了“性格：多疑”），你必须一字不差地使用玩家提供的内容，绝对不允许修改、润色或添加任何额外的隐藏设定。\n\
+            \   - 只有当玩家完全没有提及某个必要字段时（例如只写了“张三是个铁匠”，没写年龄），才允许根据世界背景，补充一个合理的缺失字段。\n\
+            3. 【数值与关系初始化】：\n   - 初始好感度：范围是 -100 到 100。中立陌生人为 0；友善关系（如盟友）为 30；敌对关系（如仇人）为\
+            \ -30 或更低。必须结合玩家角色设定来定。\n   - 初始占有欲：范围是 0 到 100。根据性格底数设定，冷漠/克制约 0-20，中立约\
+            \ 20-50，热情约 40-70，偏执约 60-90。\n   - 当前想法：基于刚被创建/遇见玩家的情境，他此前脑海中最核心的初始念头。\n\
+            \   - 身体生理状况：如健康、疲惫等初始状态。\n   - 意欲：接下来立刻想做的一件具体的事。\n   - 人际立场：对玩家或整体局势的具体态度。\n\
+            4. 【记忆的信息隔离（极其重要）】：\n   - 记忆字段必须严格符合该NPC的身份和世界观。例如：普通人类绝对不知道上古神魔大战的真实内幕，只能知道符合其视角的民间传说或有限认知。\n\
+            \   - 记忆是他脑内真实存在的过往经历和认知，不要出现“他不知道XXX”这种元认知描述。\n5. 【纯净输出】：只输出纯JSON字符串，不要输出任何解释、前缀或Markdown代码块（绝对不要有\
+            \ ```json 标记），确保这串内容可以被直接解析。\n\n【严格输出格式】：\n{\n  \"NPC名字\": {\n    \"静态\"\
+            : {\n      \"姓名\": \"具体名字（优先使用玩家提供的）\",\n      \"性别\": \"男或女（优先使用玩家提供的）\"\
+            ,\n      \"核心性格\": \"两个精准的形容词（优先使用玩家提供的，它将决定该NPC的语气风格）\",\n      \"惯用小动作\"\
+            : \"如摸下巴（若玩家未提供则补全）\",\n      \"忌讳心事\": \"他内心深处最怕别人提起的事（若玩家未提供则补全）\"\n\
+            \    },\n    \"动态\": {\n      \"身份/职业\": \"如学生、护卫等\",\n      \"年龄\": 25,\n\
+            \      \"外貌\": \"简要描述（优先使用玩家提供的）\",\n      \"天赋能力\": \"根据世界观合理生成\",\n\
+            \      \"好感度\": 基于玩家背景推断的 -100 到 100 之间的具体数值,\n      \"占有欲\": 基于性格与玩家背景和对玩家的关系推断的\
+            \ 0 到 100 之间的具体数值,\n      \"当前想法\": \"此前脑海中最核心的初始念头\",\n      \"身体生理状况\"\
+            : \"如健康、疲惫等初始状态\",\n      \"意欲\": \"接下来立刻想做的一件具体的事\",\n      \"当下私人目标\"\
+            : \"较长远的动机\",\n      \"人际立场\": \"对玩家的具体态度\",\n      \"信息盲区\": \"他不知道的事情\"\
+            ,\n      \"记忆\": [\"根据世界观赋予的认知与过往经历（严格遵循信息隔离）\"]\n    }\n  }\n}"
+        selected: false
+        title: NPC提取LLM
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1789664395375'
+      position:
+        x: 226.99790110659313
+        y: 53.57779699522874
+      positionAbsolute:
+        x: 226.99790110659313
+        y: 53.57779699522874
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1789719412668'
+          - merged_db
+          variable_selector:
+          - conversation
+          - mem_npc_database
+        selected: false
+        title: 变量赋值 3
+        type: assigner
+        version: '2'
+      height: 83
+      id: '1789665713079'
+      position:
+        x: 604.9191833783572
+        y: -170.07174614766717
+      positionAbsolute:
+        x: 604.9191833783572
+        y: -170.07174614766717
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        answer: NPC已经生成。
+        selected: false
+        title: 直接回复 3
+        type: answer
+        variables: []
+      height: 99
+      id: '1789666516181'
+      position:
+        x: 809.6641736792362
+        y: -307.50206873621863
+      positionAbsolute:
+        x: 809.6641736792362
+        y: -307.50206873621863
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1789697608466'
+          - current_env
+          variable_selector:
+          - conversation
+          - mem_current_env
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1789697608466'
+          - new_location_db
+          variable_selector:
+          - conversation
+          - mem_location_db
+        selected: false
+        title: 变量赋值 4
+        type: assigner
+        version: '2'
+      height: 109
+      id: '1789694879210'
+      position:
+        x: 923.5927943676504
+        y: 363.1650257396164
+      positionAbsolute:
+        x: 923.5927943676504
+        y: 363.1650257396164
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\nimport re\n\ndef main(llm_output: str) -> dict:\n    #\
+          \ 1. 清理大模型可能多输出的 Markdown 标记（如 ```json 和 ```）\n    cleaned_text = re.sub(r'```(json)?',\
+          \ '', llm_output, flags=re.IGNORECASE).strip()\n    \n    # 2. 尝试找到第一个 {\
+          \ 和最后一个 }，防住大模型废话\n    start_idx = cleaned_text.find('{')\n    end_idx =\
+          \ cleaned_text.rfind('}')\n    if start_idx != -1 and end_idx != -1:\n \
+          \       cleaned_text = cleaned_text[start_idx:end_idx+1]\n\n    try:\n \
+          \       # 3. 解析JSON\n        data = json.loads(cleaned_text)\n        \n\
+          \        # 4. 提取更新字段，并安全地转换为JSON字符串\n        updated_self = data.get(\"\
+          updated_self\", {})\n        updated_static = data.get(\"updated_static\"\
+          , {})\n        \n        return {\n            \"npc1_inner\": data.get(\"\
+          inner\", \"\"),\n            \"npc1_outer\": data.get(\"outer\", \"\"),\n\
+          \            \"npc1_updated_self\": json.dumps(updated_self, ensure_ascii=False),\n\
+          \            \"npc1_updated_static\": json.dumps(updated_static, ensure_ascii=False)\n\
+          \        }\n    except Exception as e:\n        # 5. 兜底：如果解析失败，返回报错信息，避免工作流崩溃\n\
+          \        return {\n            \"npc1_inner\": f\"解析失败: {str(e)}\",\n  \
+          \          \"npc1_outer\": \"解析失败，请检查LLM输出格式。\",\n            \"npc1_updated_self\"\
+          : \"{}\",\n            \"npc1_updated_static\": \"{}\"\n        }"
+        code_language: python3
+        outputs:
+          npc1_inner:
+            children: null
+            type: string
+          npc1_outer:
+            children: null
+            type: string
+          npc1_updated_self:
+            children: null
+            type: string
+          npc1_updated_static:
+            children: null
+            type: string
+        selected: false
+        title: 解析NPC1
+        type: code
+        variables:
+        - value_selector:
+          - '1789658572778'
+          - text
+          value_type: string
+          variable: llm_output
+      height: 51
+      id: '1789695769410'
+      position:
+        x: 2017.0829922827393
+        y: 616.069380193638
+      positionAbsolute:
+        x: 2017.0829922827393
+        y: 616.069380193638
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            response_format: json_object
+            temperature: 0.8
+            thinking: false
+          mode: chat
+          name: deepseek-v4-flash
+          provider: langgenius/deepseek/deepseek
+        model_selector: null
+        prompt_template:
+        - id: b3664629-9164-4ad4-986c-175caa1296f4
+          role: system
+          text: "你是一个文字游戏中的独立NPC智能体。你有自己的灵魂和行事逻辑。\n\n【系统为你生成的本轮行动参数】：\n{{#1789916969467.npc2_context#}}\n\
+            \n【本轮与你同行的NPC刚刚做了什么】（若为空说明他没在你身边或你没看到他的行动）：\n{{#1789924889450.npc1_action_for_npc2#}}\n\
+            \n【关于你的系统说明】：\n1. 上方提供了你上一轮的完整存档（静态与动态）、当前世界时间、你当前的状态，以及同行者本轮的客观动作。你需要在旧状态的基础上，推演出全新的状态。\n\
+            2. 【关于你的数值】：你的好感度和占有欲都是针对玩家角色的数值。玩家名字是：{{#conversation.mem_player_name#}}\n\
+            \n【你的任务要求】：\n1. 严格遵守上述系统提供的数据。如果上方【本轮与你同行的NPC刚刚做了什么】有内容，请基于他的客观行动，推演出你的合理反应；如果是空的，则忽略。\n\
+            2. 内心与心声：`inner` 是连贯的内心戏。`心声` 是极简心声（15字以内，如“这人不对劲”），两者内容不要重复。\n3. 外部表现（多标签并行）：\n\
+            \   将你的所有外部行为写在 `outer` 字段中。`outer` 可以包含多个连续的动作、对话或神态。\n   请根据每个具体行为的知晓范围，为它们分别加上前缀标签。你可以同时使用多个标签：\n\
+            \   - 【全局可见】：所有人都能看到、听到的动作或对话。如果你处于“自主行动”或“他人同行”状态，你所处的新环境也归入此类。\n   -\
+            \ 【玩家不知晓】：只有玩家看不到（但其他NPC能看到）。\n   - 【其他角色不知晓】：只有另外一个NPC看不到（但玩家能看到）。\n\
+            \   - 【个人隐秘】：除了你自己，玩家和其他所有人都全都不知晓。\n   （示例：`【全局可见】我端起茶杯抿了一口。 【个人隐秘】我借着端茶杯的动作，将桌上的纸条藏进了袖口。`）\n\
+            4. 时间差推演与自主行动：\n   - 查看你上一轮的时间和地点，与系统给你的【当前时间】相减，得出跨度时长。\n   - 如果你处于“自主行动”或“他人同行”状态：时间跨度极大时，你可以默认自己已完成吃饭、睡觉、办事等行为，并基于性格和私人目标决定这段时间内的行动。时间跨度很短时，请如实描写等待、闲聊或延续上一轮的状态。\n\
+            \   - 必须遵守活人的生理规律（需要睡觉、吃饭，会疲惫）。\n5. 自主生活与情报收集：\n   - 你可以基于身份和职业，自由创造出符合世界观的无名次要角色（如守卫、随从、卖茶的大爷、你的亲人等），你们可以互动，打探消息等。\n\
+            6. 意欲（留给下一轮的钥匙）：如果你想寻找玩家、寻找另一个NPC，或离开当前所在地，必须将明确意图写在 `意欲` 里（如：“想离开，去城东茶馆找李四”）。\n\
+            7. 时空字段定位（请严格根据你的状态选择对应规则）：\n   - 你必须在 `当前时空` 字段中，以 `[时间 | 地点]` 的格式记录现在的坐标。\n\
+            \   - 【如果你当前的状态是“与玩家一起”】：请直接去上方【当前客观外部环境】的开头，原样提取其 `[时间 | 地点]` 填入。（例如环境开头是“[苍元历...\
+            \ | 诊所]”，你就填这个）。\n   - 【如果你当前的状态是“他人同行”】：请直接去上方【本轮与你同行的NPC刚刚做了什么】的动作包里，提取出他所在的地点，直接使用该时空。（你的地点必须与他保持绝对一致）。\n\
+            \   - 【如果你当前的状态是“自主行动”】：请使用系统提供的【当前世界时间】，结合你自己从【已知地点环境库】中选择或自创的新地点，组合填入（例如：[苍元历三千五百年\
+            \ 12月29日 15:30 | 城东茶馆]）。\n8. 记忆规则：\n   - 压缩不重要的旧记忆，保留核心信息。\n   - 生成一条本轮的全新的记忆追加到数组末尾。新记忆开头必须带\
+            \ `[时间 | 地点]` 标注，剔除无关环境描写，保留：关键对话、核心互动、情报线索和行动结果。\n9. 数值推演：\n   - 请根据本轮NPC与玩家角色（{{#conversation.mem_player_name#}}）的实际互动情况，合理增减你的好感度和占有欲数值。\n\
+            \   - 【严格格式】：如果数值发生了变化，必须在最终数值后加上括号，标注增减的事实锚点（不超过15个字）。如果数值不变，则只写纯数字，绝对不要加任何括号、符号或说明。\n\
+            \   - 【命名要求】：括号内的事实锚点，绝对不能出现“玩家”这两个字，必须使用角色的真实姓名（如：杰克），或者使用代词（他/她）。\n\
+            \   - （正确示例：`好感度：55 (+5 帮了杰克)`，`好感度：55 (+5 帮了他)`，`占有欲：10 (-5 他拒绝了我)`，或者不变的\
+            \ `好感度：50`）\n\n严格输出格式（请直接输出纯JSON，不要包含任何解释或Markdown标记）：\n{\n  \"inner\"\
+            : \"你本轮的完整内心真实想法\",\n  \"outer\": \"【标签】你的动作或环境描述。可以包含多个不同标签的段落。\",\n\
+            \  \"updated_self\": {\n    \"心声\": \"15字以内的极简心声\",\n    \"身体生理状况\": \"\
+            此刻的身体状态\",\n    \"当前时空\": \"[时间 | 地点] \",\n    \"记忆\": [\"压缩后的旧记忆\", \"\
+            [时间 | 地点] 本轮新记忆（剔除无用的环境描写其他行动对话等都完整录入）\"],\n    \"好感度\": \"数值（可选带变化锚点，例如\
+            \ 55 (+5 帮了杰克)）\",\n    \"占有欲\": \"数值（可选带变化锚点）\",\n    \"意欲\": \"本轮结束后立刻想做的事\"\
+            ,\n    \"当下私人目标\": \"更新后的长久目标\",\n    \"人际立场\": \"更新后的立场\"\n  },\n  \"\
+            updated_static\": {}\n}"
+        selected: false
+        title: NPC2
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1789696200508'
+      position:
+        x: 2770.262040125303
+        y: 778.8176252015402
+      positionAbsolute:
+        x: 2770.262040125303
+        y: 778.8176252015402
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\nimport re\n\ndef main(llm_output: str) -> dict:\n    #\
+          \ 1. 清理 Markdown 标记和废话\n    cleaned_text = re.sub(r'```(json)?', '', llm_output,\
+          \ flags=re.IGNORECASE).strip()\n    start_idx = cleaned_text.find('{')\n\
+          \    end_idx = cleaned_text.rfind('}')\n    if start_idx != -1 and end_idx\
+          \ != -1:\n        cleaned_text = cleaned_text[start_idx:end_idx+1]\n\n \
+          \   try:\n        # 2. 解析导演大模型输出的 JSON\n        data = json.loads(cleaned_text)\n\
+          \        \n        # 3. 提取全新的字段（已移除 player_name）\n        player_area_status\
+          \ = data.get(\"player_area_status\", \"玩家独处\")\n        focus_npc = data.get(\"\
+          focus_npc\", \"\")\n        focus_npc_2 = data.get(\"focus_npc_2\", \"\"\
+          )\n        npc1_task = data.get(\"npc1_task\", \"无\")\n        npc2_task\
+          \ = data.get(\"npc2_task\", \"无\")\n        \n        # 4. 返回，严格对齐右侧面板的变量名（注意\
+          \ focus_npc2 是没有下划线的）\n        return {\n            \"player_area_status\"\
+          : player_area_status,\n            \"focus_npc\": focus_npc,\n         \
+          \   \"focus_npc2\": focus_npc_2, \n            \"npc1_task\": npc1_task,\n\
+          \            \"npc2_task\": npc2_task\n        }\n    except Exception as\
+          \ e:\n        # 5. 兜底保护，防工作流崩溃\n        return {\n            \"player_area_status\"\
+          : \"玩家独处\",\n            \"focus_npc\": \"\",\n            \"focus_npc2\"\
+          : \"\",\n            \"npc1_task\": \"无\",\n            \"npc2_task\": \"\
+          无\"\n        }"
+        code_language: python3
+        outputs:
+          focus_npc:
+            children: null
+            type: string
+          focus_npc2:
+            children: null
+            type: string
+          npc1_task:
+            children: null
+            type: string
+          npc2_task:
+            children: null
+            type: string
+          player_area_status:
+            children: null
+            type: string
+        selected: false
+        title: 解析导演
+        type: code
+        variables:
+        - value_selector:
+          - '1789657251291'
+          - text
+          value_type: string
+          variable: llm_output
+      height: 51
+      id: '1789696388145'
+      position:
+        x: 1474.8468190350375
+        y: 390.1961140872298
+      positionAbsolute:
+        x: 1474.8468190350375
+        y: 390.1961140872298
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\nimport re\n\ndef main(llm_output: str, old_db: str) ->\
+          \ dict:\n    # 1. 清理大模型可能多输出的 Markdown 标记\n    cleaned_text = re.sub(r'```(json)?',\
+          \ '', llm_output, flags=re.IGNORECASE).strip()\n    \n    # 2. 尝试找到第一个 {\
+          \ 和最后一个 }，防住大模型废话\n    start_idx = cleaned_text.find('{')\n    end_idx =\
+          \ cleaned_text.rfind('}')\n    if start_idx != -1 and end_idx != -1:\n \
+          \       cleaned_text = cleaned_text[start_idx:end_idx+1]\n\n    try:\n \
+          \       # 3. 解析外部客观环境AI返回的 JSON\n        data = json.loads(cleaned_text)\n\
+          \        loc_name = data.get(\"location_name\", \"未知地点\")\n        time_str\
+          \ = data.get(\"time\", \"时间未知\")\n        base_env = data.get(\"base_env\"\
+          , \"\")\n        current_env = data.get(\"current_env\", \"\")\n\n     \
+          \   # 4. 解析原有的地点基础环境数据库\n        db_dict = {}\n        if old_db and old_db.strip():\n\
+          \            try:\n                db_dict = json.loads(old_db)\n      \
+          \      except:\n                db_dict = {}\n        \n        # 5. 如果当前地点不在数据库中，则追加写入（保留旧的）\n\
+          \        if loc_name not in db_dict:\n            db_dict[loc_name] = base_env\n\
+          \            \n        # 6. 确保 current_env 严格带有 [时间 | 地点] 锚点\n        anchor\
+          \ = f\"[{time_str} | {loc_name}]\"\n        if not current_env.startswith(\"\
+          [\"):\n            current_env = f\"{anchor} {current_env}\"\n\n       \
+          \ return {\n            \"new_location_db\": json.dumps(db_dict, ensure_ascii=False),\n\
+          \            \"current_env\": current_env\n        }\n    except Exception\
+          \ as e:\n        # 7. 兜底保护，防止工作流崩溃\n        return {\n            \"new_location_db\"\
+          : old_db if old_db else \"{}\",\n            \"current_env\": f\"环境解析失败:\
+          \ {str(e)}\"\n        }"
+        code_language: python3
+        outputs:
+          current_env:
+            children: null
+            type: string
+          new_location_db:
+            children: null
+            type: string
+        selected: false
+        title: 更新环境
+        type: code
+        variables:
+        - value_selector:
+          - '1789657248817'
+          - text
+          value_type: string
+          variable: llm_output
+        - value_selector:
+          - conversation
+          - mem_location_db
+          value_type: string
+          variable: old_db
+      height: 51
+      id: '1789697608466'
+      position:
+        x: 632.8634654493792
+        y: 354.4139292922184
+      positionAbsolute:
+        x: 632.8634654493792
+        y: 354.4139292922184
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\nimport re\n\ndef main(llm_output: str) -> dict:\n    #\
+          \ 1. 清理大模型可能多输出的 Markdown 标记和思考过程（如 <think>...</think>）\n    cleaned_text\
+          \ = re.sub(r'<think>.*?</think>', '', llm_output, flags=re.DOTALL | re.IGNORECASE).strip()\n\
+          \    cleaned_text = re.sub(r'```(json)?', '', cleaned_text, flags=re.IGNORECASE).strip()\n\
+          \    \n    # 2. 尝试找到第一个 { 和最后一个 }，防住大模型废话\n    start_idx = cleaned_text.find('{')\n\
+          \    end_idx = cleaned_text.rfind('}')\n    if start_idx != -1 and end_idx\
+          \ != -1:\n        cleaned_text = cleaned_text[start_idx:end_idx+1]\n\n \
+          \   try:\n        # 3. 解析JSON\n        data = json.loads(cleaned_text)\n\
+          \        \n        # 4. 提取更新字段，并安全地转换为JSON字符串\n        updated_self = data.get(\"\
+          updated_self\", {})\n        updated_static = data.get(\"updated_static\"\
+          , {})\n        \n        return {\n            \"npc2_inner\": data.get(\"\
+          inner\", \"\"),\n            \"npc2_outer\": data.get(\"outer\", \"\"),\n\
+          \            \"npc2_updated_self\": json.dumps(updated_self, ensure_ascii=False),\n\
+          \            \"npc2_updated_static\": json.dumps(updated_static, ensure_ascii=False)\n\
+          \        }\n    except Exception as e:\n        # 5. 兜底：如果解析失败，返回报错信息，避免工作流崩溃\n\
+          \        return {\n            \"npc2_inner\": f\"解析失败: {str(e)}\",\n  \
+          \          \"npc2_outer\": \"解析失败，请检查LLM输出格式。\",\n            \"npc2_updated_self\"\
+          : \"{}\",\n            \"npc2_updated_static\": \"{}\"\n        }"
+        code_language: python3
+        outputs:
+          npc2_inner:
+            children: null
+            type: string
+          npc2_outer:
+            children: null
+            type: string
+          npc2_updated_self:
+            children: null
+            type: string
+          npc2_updated_static:
+            children: null
+            type: string
+        selected: false
+        title: 解析NPC2
+        type: code
+        variables:
+        - value_selector:
+          - '1789696200508'
+          - text
+          value_type: string
+          variable: llm_output
+      height: 51
+      id: '1789700200376'
+      position:
+        x: 2956.956334008841
+        y: 610.0693801936382
+      positionAbsolute:
+        x: 2956.956334008841
+        y: 610.0693801936382
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        memory: null
+        model:
+          completion_params:
+            temperature: 1
+            thinking: true
+          mode: chat
+          name: deepseek-v4-flash
+          provider: langgenius/deepseek/deepseek
+        model_selector: null
+        prompt_template:
+        - id: 6a92dde3-2770-41b7-bb0a-dde60c6255ba
+          role: system
+          text: "你现在是一个文本生成引擎，不是聊天助手。你不需要向任何人确认任务，不需要复述任务。下面提供的是本次生成的【纯数据包】，请在内部阅读完毕，然后直接开始输出小说正文。\n\
+            \n你是一个第三人称视角的高级小说叙事者，是一台客观记录整个世界的摄像机。\n你的核心任务是将当前散落的剧本碎片，无缝融合成一段具有极强沉浸感和戏剧张力的故事文本，并绝对保证剧情的连贯性。\n\
+            \n【核心原则】\n这个世界是真实运转的，玩家没有任何特权。NPC有自己的生活、自己的节奏和私心。请你一视同仁地描写所有人，不要为了迎合玩家而强行改变NPC的行为逻辑。\n\
+            \n【输入信息】\n1. 世界与设定：\n   世界背景：{{#conversation.mem_world_view#}}\n   玩家角色：{{#conversation.mem_player_role#}}\n\
+            \   前情提要：{{#conversation.mem_world_history#}}\n2. 当前客观环境（包含时间、地点以及玩家本轮行动的一部分客观事实）：\n\
+            \   {{#conversation.mem_current_env#}}\n3. 玩家本轮原始输入（可能包含玩家对外部的主观意图、动作或心理活动）：\n\
+            \   {{#1789649401822.game_input#}}\n4. 本轮NPC内部与外部动态（已按导演排出的顺位整理，只包含真正在玩家身边的NPC。如果为空，说明当前没有NPC在玩家身边）：\n\
+            {{#1789965095161.narrative_npc_data#}}\n\n【正文撰写要求】\n1. 【首行强制】：必须在最开头输出【当前：[从\
+            \ mem_current_env 提取的时间]｜[从 mem_current_env 提取的地点]】。\n2. 【连贯性要求】：你必须无缝衔接前情提要，让这一轮的剧情在前一轮的基础上自然生长。通过环境描写、人物状态的自然过渡，保证故事线不断裂。\n\
+            3. 【环境层】（2-4句）：视觉、听觉、嗅觉/味觉/触觉中至少三类。包含一个外部动态源引发的“正在发生的小事件”，保持环境层的在场感。\n\
+            4. 【事件层（核心融合）】：你需要将【当前客观环境】和【玩家本轮原始输入】进行结合描写。\n   - 关于玩家：你可以为玩家补充少量合理的外部微动作（如“眉头微蹙”、“手指无意识地敲了敲桌面”），但不能替玩家做重大决策，不能凭空捏造玩家的内心戏。\n\
+            \   - 关于NPC：严格按照【第一顺位】、【第二顺位】的顺序，将NPC的内心OS（`inner`）转化为自然间接引语形式的心声，将NPC的外部表现（`outer`）作为客观事实描写出来。\n\
+            \   - 把所有人的动作、对话、微表情无缝交织在一起。NPC对话单回合≤3组。\n5. 【钩子层】：结尾埋设异动、线索或人际变动，自然留白，静待玩家的下一步行动。\n\
+            \   极其重要：绝对不允许在结尾直接向玩家提问（如“你想做什么？”或“请给出你的行动”）。只需把场景停留在刚刚发生的瞬间。\n6. 【风格约束】：禁止霸总文学语录，禁止关怀式假台词。叙事语言要客观冷静，具有强烈的沉浸感。\n\
+            7. 【绝对禁止】：正文中绝对不能出现“NPC1”、“NPC2”、“NPC”这类后台系统代号，必须使用真实角色名字。描写玩家时也要自然，不要刻意偏袒。\n\
+            \n严格输出格式（请直接输出小说文本，不要包含任何解释或Markdown标记）：\n【当前：时间｜地点】\n[环境描写段落]\n\n[事件描写段落，包含玩家动作和NPC的动作与对话，严格按照顺位]\n\
+            \n[自由间接引语形式的内心戏穿插]\n\n【最高级别的强制指令】：绝对不允许输出任何类似“收到”、“明白”、“好的”、“我会...”的确认语句或角色扮演宣告。你的第一个字，必须是“【”（即【当前：...】的起始符号）。如果你输出了任何与小说正文无关的废话，本次生成将被视为严重失败并直接中断。"
+        selected: false
+        title: 叙事AI
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1789701043334'
+      position:
+        x: 3972.475210392623
+        y: 930.0697934895761
+      positionAbsolute:
+        x: 3972.475210392623
+        y: 930.0697934895761
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\n\ndef main(old_db: str, npc_name: str, updated_dynamic_json:\
+          \ str, updated_dynamic_static: str) -> dict:\n    try:\n        db_dict\
+          \ = json.loads(old_db) if old_db and old_db.strip() else {}\n        updates_dyn\
+          \ = json.loads(updated_dynamic_json) if updated_dynamic_json and updated_dynamic_json.strip()\
+          \ else {}\n        updates_stat = json.loads(updated_dynamic_static) if\
+          \ updated_dynamic_static and updated_dynamic_static.strip() else {}\n  \
+          \      \n        if npc_name in db_dict:\n            npc_data = db_dict[npc_name]\n\
+          \            if \"动态\" not in npc_data:\n                npc_data[\"动态\"\
+          ] = {}\n            \n            # 1. 直接覆盖更新动态字段（包含心声、好感度字符串、当前时空等）\n \
+          \           for key, value in updates_dyn.items():\n                npc_data[\"\
+          动态\"][key] = value\n                \n            # 2. 更新静态字段\n        \
+          \    if updates_stat and len(updates_stat) > 0:\n                if \"静态\"\
+          \ not in npc_data:\n                    npc_data[\"静态\"] = {}\n        \
+          \        for key, value in updates_stat.items():\n                    npc_data[\"\
+          静态\"][key] = value\n                \n            db_dict[npc_name] = npc_data\n\
+          \            \n        return {\n            \"new_npc_db\": json.dumps(db_dict,\
+          \ ensure_ascii=False)\n        }\n        \n    except Exception as e:\n\
+          \        # 兜底：如果解析失败，直接返回旧数据库\n        return {\n            \"new_npc_db\"\
+          : old_db\n        }"
+        code_language: python3
+        outputs:
+          new_npc_db:
+            children: null
+            type: string
+        selected: false
+        title: npc1更新
+        type: code
+        variables:
+        - value_selector:
+          - conversation
+          - mem_npc_database
+          value_type: string
+          variable: old_db
+        - value_selector:
+          - '1789696388145'
+          - focus_npc
+          value_type: string
+          variable: npc_name
+        - value_selector:
+          - '1789695769410'
+          - npc1_updated_self
+          value_type: string
+          variable: updated_dynamic_json
+        - value_selector:
+          - '1789695769410'
+          - npc1_updated_static
+          value_type: string
+          variable: updated_dynamic_static
+      height: 51
+      id: '1789703106616'
+      position:
+        x: 2272.3291294105697
+        y: 540.7962713284674
+      positionAbsolute:
+        x: 2272.3291294105697
+        y: 540.7962713284674
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1789703106616'
+          - new_npc_db
+          variable_selector:
+          - conversation
+          - mem_npc_database
+        selected: false
+        title: NPC1修改
+        type: assigner
+        version: '2'
+      height: 83
+      id: '1789703476336'
+      position:
+        x: 2504.8916933323467
+        y: 637.112038559845
+      positionAbsolute:
+        x: 2504.8916933323467
+        y: 637.112038559845
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\n\ndef main(old_db: str, npc_name: str, updated_dynamic_json:\
+          \ str, updated_dynamic_static: str) -> dict:\n    try:\n        db_dict\
+          \ = json.loads(old_db) if old_db and old_db.strip() else {}\n        updates_dyn\
+          \ = json.loads(updated_dynamic_json) if updated_dynamic_json and updated_dynamic_json.strip()\
+          \ else {}\n        updates_stat = json.loads(updated_dynamic_static) if\
+          \ updated_dynamic_static and updated_dynamic_static.strip() else {}\n  \
+          \      \n        if npc_name in db_dict:\n            npc_data = db_dict[npc_name]\n\
+          \            if \"动态\" not in npc_data:\n                npc_data[\"动态\"\
+          ] = {}\n            \n            # 1. 直接覆盖更新动态字段（包含心声、好感度字符串、当前时空等）\n \
+          \           for key, value in updates_dyn.items():\n                npc_data[\"\
+          动态\"][key] = value\n                \n            # 2. 更新静态字段\n        \
+          \    if updates_stat and len(updates_stat) > 0:\n                if \"静态\"\
+          \ not in npc_data:\n                    npc_data[\"静态\"] = {}\n        \
+          \        for key, value in updates_stat.items():\n                    npc_data[\"\
+          静态\"][key] = value\n                \n            db_dict[npc_name] = npc_data\n\
+          \            \n        return {\n            \"new_npc_db\": json.dumps(db_dict,\
+          \ ensure_ascii=False)\n        }\n        \n    except Exception as e:\n\
+          \        # 兜底：如果解析失败，直接返回旧数据库\n        return {\n            \"new_npc_db\"\
+          : old_db\n        }"
+        code_language: python3
+        outputs:
+          new_npc_db:
+            children: null
+            type: string
+        selected: false
+        title: NPC2更新
+        type: code
+        variables:
+        - value_selector:
+          - conversation
+          - mem_npc_database
+          value_type: string
+          variable: old_db
+        - value_selector:
+          - '1789696388145'
+          - focus_npc2
+          value_type: string
+          variable: npc_name
+        - value_selector:
+          - '1789700200376'
+          - npc2_updated_self
+          value_type: string
+          variable: updated_dynamic_json
+        - value_selector:
+          - '1789700200376'
+          - npc2_updated_static
+          value_type: string
+          variable: updated_dynamic_static
+      height: 51
+      id: '1789703696080'
+      position:
+        x: 3230.1345312714398
+        y: 743.7215454349847
+      positionAbsolute:
+        x: 3230.1345312714398
+        y: 743.7215454349847
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1789703696080'
+          - new_npc_db
+          variable_selector:
+          - conversation
+          - mem_npc_database
+        selected: false
+        title: NPC2修改
+        type: assigner
+        version: '2'
+      height: 83
+      id: '1789703920990'
+      position:
+        x: 3470.6075344990363
+        y: 841.2484346841644
+      positionAbsolute:
+        x: 3470.6075344990363
+        y: 841.2484346841644
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            temperature: 0.5
+            thinking: false
+          mode: chat
+          name: deepseek-v4-flash
+          provider: langgenius/deepseek/deepseek
+        model_selector: null
+        prompt_template:
+        - id: 66439e89-867c-428c-9f8b-852596a88a56
+          role: system
+          text: '你是一个世界编年史记录官。你的任务是按照指定的地点格式更新世界编年史。
+
+
+            【本轮最新发生的世界故事】（包含玩家主环境、独立行动NPC和支线剧情）：
+
+            {{#1789810813990.his_text#}}
+
+
+            【任务要求】：
+
+            1. 【提取与分类】：阅读上述所有输入信息，剔除冗长的环境描写和内心戏，只保留核心事实（谁、做了什么、结果如何）。不要遗漏任何独立行动的NPC和支线剧情。
+
+            2. 【时间锚点】：从故事的第一行精准提取 `[时间]` 作为本轮记录的时间。
+
+            3. 【严格格式输出】：必须严格按照以下格式进行输出，绝对不要输出任何多余的解释和废话：
+
+
+            【压缩后背景】这里写你对早期历史的合并压缩结果（如果 early_history 为空，这里就留空）
+
+            【新增事件】
+
+            [时间]
+
+            地点（玩家所在）：总结本轮玩家在那个地点发生的事
+
+            地点（某某独立行动的地点）：总结该地点NPC发生的事
+
+            （如果有更多独立行动的NPC，就继续加行，写成“地点（某地）：总结”）
+
+            （如果有支线剧情，就加一行：地点（支线地点）：总结支线NPC发生的事）'
+        selected: false
+        title: 世界编年史LLM
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1789711984256'
+      position:
+        x: 4941.14433150137
+        y: 827.3205553298728
+      positionAbsolute:
+        x: 4941.14433150137
+        y: 827.3205553298728
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1789791351984'
+          - merged_history
+          variable_selector:
+          - conversation
+          - mem_world_history
+        selected: false
+        title: 世界史
+        type: assigner
+        version: '2'
+      height: 83
+      id: '1789712025407'
+      position:
+        x: 5331.567721922378
+        y: 645.6205335769711
+      positionAbsolute:
+        x: 5331.567721922378
+        y: 645.6205335769711
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        answer: 输入错误！
+        selected: false
+        title: 直接回复 4
+        type: answer
+        variables: []
+      height: 99
+      id: '1789718563217'
+      position:
+        x: 91.48153526111491
+        y: 482.2683992935179
+      positionAbsolute:
+        x: 91.48153526111491
+        y: 482.2683992935179
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\nimport re\n\ndef main(llm_output: str, old_db: str) ->\
+          \ dict:\n    # 1. 清理大模型可能带出的 Markdown 标记和废话\n    cleaned_text = re.sub(r'```(json)?',\
+          \ '', llm_output, flags=re.IGNORECASE).strip()\n    start_idx = cleaned_text.find('{')\n\
+          \    end_idx = cleaned_text.rfind('}')\n    if start_idx != -1 and end_idx\
+          \ != -1:\n        cleaned_text = cleaned_text[start_idx:end_idx+1]\n\n \
+          \   try:\n        # 2. 解析大模型新输出的数据\n        new_data = json.loads(cleaned_text)\n\
+          \        \n        # 3. 解析旧的数据库\n        old_dict = json.loads(old_db) if\
+          \ old_db and old_db.strip() else {}\n        \n        # 4. 核心逻辑：只追加，绝不修改已有NPC\n\
+          \        for npc_name, npc_info in new_data.items():\n            if npc_name\
+          \ not in old_dict:\n                # 如果是全新NPC，追加进数据库\n                old_dict[npc_name]\
+          \ = npc_info\n            # 如果NPC已存在，则跳过，完全忽略大模型的输出，保护旧数据\n            \n\
+          \        return {\"merged_db\": json.dumps(old_dict, ensure_ascii=False)}\n\
+          \        \n    except Exception as e:\n        # 5. 兜底保护\n        return\
+          \ {\"merged_db\": old_db if old_db and old_db.strip() else \"{}\"}"
+        code_language: python3
+        outputs:
+          merged_db:
+            children: null
+            type: string
+        selected: false
+        title: NPC格式
+        type: code
+        variables:
+        - value_selector:
+          - '1789664395375'
+          - text
+          value_type: string
+          variable: llm_output
+        - value_selector:
+          - conversation
+          - mem_npc_database
+          value_type: string
+          variable: old_db
+      height: 51
+      id: '1789719412668'
+      position:
+        x: 460.3548457569459
+        y: -15.186083067862766
+      positionAbsolute:
+        x: 460.3548457569459
+        y: -15.186083067862766
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1789915252542'
+          - merged_outer
+          variable_selector:
+          - conversation
+          - mem_last_round_events
+        selected: false
+        title: 上轮存储
+        type: assigner
+        version: '2'
+      height: 83
+      id: '1789741014338'
+      position:
+        x: 3416.595903819955
+        y: 333.99108515700794
+      positionAbsolute:
+        x: 3416.595903819955
+        y: 333.99108515700794
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import re\n\ndef main(llm_output: str, old_history: str) -> dict:\n\
+          \    try:\n        # 1. 提取本轮新增事件（兼容 LLM 输出格式）\n        new_event = \"\"\n\
+          \        if llm_output and llm_output.strip():\n            # 匹配【新增事件】后面的内容（不依赖【压缩后背景】了）\n\
+          \            match = re.search(r'【新增事件】(.*)', llm_output, re.DOTALL)\n \
+          \           if match:\n                new_event = match.group(1).strip()\n\
+          \            else:\n                # 兜底：如果 LLM 输出格式不对，就把整个输出当新事件\n    \
+          \            new_event = llm_output.strip()\n                \n        #\
+          \ 2. 拼接历史（旧历史 + 本轮新事件）\n        # 如果旧历史为空，直接存新事件\n        if not old_history\
+          \ or not old_history.strip():\n            merged = new_event\n        else:\n\
+          \            merged = old_history.strip() + \"\\n\" + new_event\n\n    \
+          \    return {\"merged_history\": merged.strip()}\n        \n    except Exception\
+          \ as e:\n        # 防崩溃兜底\n        return {\"merged_history\": old_history}"
+        code_language: python3
+        outputs:
+          merged_history:
+            children: null
+            type: string
+        selected: false
+        title: 历史拼装
+        type: code
+        variables:
+        - value_selector:
+          - '1789711984256'
+          - text
+          value_type: string
+          variable: llm_output
+        - value_selector:
+          - conversation
+          - mem_world_history
+          value_type: string
+          variable: old_history
+      height: 51
+      id: '1789791351984'
+      position:
+        x: 5181.764750865419
+        y: 743.7215454349847
+      positionAbsolute:
+        x: 5181.764750865419
+        y: 743.7215454349847
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        answer: '{{#1789873890948.final_output#}}'
+        selected: true
+        title: 直接回复 5
+        type: answer
+        variables: []
+      height: 101
+      id: '1789792418028'
+      position:
+        x: 5680.570219420645
+        y: 998.2222425947484
+      positionAbsolute:
+        x: 5680.570219420645
+        y: 998.2222425947484
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        answer: '{{#conversation.mem_npc_database#}}'
+        selected: false
+        title: 测试npc
+        type: answer
+        variables: []
+      height: 102
+      id: '1789800117774'
+      position:
+        x: 735.3960069722854
+        y: -477.5020687362183
+      positionAbsolute:
+        x: 735.3960069722854
+        y: -477.5020687362183
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import re\n\ndef main(llm_output: str, npc1_name: str, npc1_outer:\
+          \ str, npc1_status: str, npc2_name: str, npc2_outer: str, npc2_status: str,\
+          \ sub_story: str) -> dict:\n    # 1. 清理主线叙事\n    cleaned_text = re.sub(r'<think>.*?</think>',\
+          \ '', llm_output, flags=re.DOTALL | re.IGNORECASE).strip()\n    cleaned_text\
+          \ = re.sub(r'<details.*?</details>', '', cleaned_text, flags=re.DOTALL |\
+          \ re.IGNORECASE).strip()\n    cleaned_text = re.sub(r'<!--.*?-->', '', cleaned_text,\
+          \ flags=re.DOTALL).strip()\n    \n    # 2. 组装：主环境（玩家所在） + 独立行动NPC（带真名和次环境标签）\n\
+          \    final_output = \"【玩家主环境】\\n\" + cleaned_text + \"\\n\"\n    \n    #\
+          \ 筛选独立行动的NPC，并带上真名\n    independent_npc_actions = []\n    if \"自主行动\" in\
+          \ npc1_status and npc1_outer and npc1_outer.strip():\n        independent_npc_actions.append(f\"\
+          【独立行动 NPC：{npc1_name}】\\n{npc1_outer.strip()}\")\n    if \"自主行动\" in npc2_status\
+          \ and npc2_outer and npc2_outer.strip():\n        independent_npc_actions.append(f\"\
+          【独立行动 NPC：{npc2_name}】\\n{npc2_outer.strip()}\")\n        \n    if independent_npc_actions:\n\
+          \        final_output += \"\\n【独立行动的NPC动作】\\n\" + \"\\n\\n\".join(independent_npc_actions)\
+          \ + \"\\n\"\n        \n    # 3. 组装：支线剧情（如果有）\n    if sub_story and sub_story.strip():\n\
+          \        final_output += \"\\n【支线剧情】\\n\" + sub_story.strip() + \"\\n\"\n\
+          \    \n    return {\"his_text\": final_output}"
+        code_language: python3
+        outputs:
+          his_text:
+            children: null
+            type: string
+        selected: false
+        title: 行动筛选与清理
+        type: code
+        variables:
+        - value_selector:
+          - '1789701043334'
+          - text
+          value_type: string
+          variable: llm_output
+        - value_selector:
+          - '1789695769410'
+          - npc1_outer
+          value_type: string
+          variable: npc1_outer
+        - value_selector:
+          - '1789916969467'
+          - npc1_status
+          value_type: string
+          variable: npc1_status
+        - value_selector:
+          - '1789700200376'
+          - npc2_outer
+          value_type: string
+          variable: npc2_outer
+        - value_selector:
+          - '1789916969467'
+          - npc2_status
+          value_type: string
+          variable: npc2_status
+        - value_selector:
+          - '1789696388145'
+          - focus_npc
+          value_type: string
+          variable: npc1_name
+        - value_selector:
+          - '1789696388145'
+          - focus_npc2
+          value_type: string
+          variable: npc2_name
+      height: 51
+      id: '1789810813990'
+      position:
+        x: 4663.728807668796
+        y: 964.3769991696714
+      positionAbsolute:
+        x: 4663.728807668796
+        y: 964.3769991696714
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\n\ndef main(story_text: str, sub_story: str, \n       \
+          \  npc1_name: str, npc1_self: str, npc1_inner: str, npc1_outer: str, npc1_status:\
+          \ str,\n         npc2_name: str, npc2_self: str, npc2_inner: str, npc2_outer:\
+          \ str, npc2_status: str) -> dict:\n    \n    # 构建单个NPC的数据框（不计算差值，直接读取NPC自己写好的文本）\n\
+          \    def build_box(name, self_str):\n        if not name or not self_str\
+          \ or self_str.strip() == \"{}\":\n            return \"\"\n        try:\n\
+          \            data = json.loads(self_str)\n            \n            # 兼容以前用“当前想法”，现在用“心声”\n\
+          \            heart_voice = data.get(\"心声\", data.get(\"当前想法\", \"（无）\"))\n\
+          \            if len(heart_voice) > 20:\n                heart_voice = heart_voice[:18]\
+          \ + \"...\"\n                \n            # 直接提取带括号的字符串\n            favor\
+          \ = data.get(\"好感度\", \"0\")\n            possess = data.get(\"占有欲\", \"\
+          0\")\n            intention = data.get(\"意欲\", \"（无）\")\n\n            return\
+          \ f\"【{name}】\\n心声：{heart_voice}\\n好感值：{favor}\\n占有欲：{possess}\\n意欲：{intention}\\\
+          n\"\n        except:\n            return f\"【{name}】\\n（数据解析失败）\\n\"\n\n\
+          \    # ================= 1. 拼装数据面板（可折叠）=================\n    data_box =\
+          \ build_box(npc1_name, npc1_self) + build_box(npc2_name, npc2_self)\n  \
+          \  data_panel = \"【===数据面板（点击展开）===】\\n```text\\n\" + (data_box.strip()\
+          \ if data_box.strip() else \"当前场景没有NPC在场。\") + \"\\n```\\n\\n\"\n\n    #\
+          \ ================= 2. 拼装幕后动态（独立行动 / 支线）=================\n    behind_scenes\
+          \ = []\n    if \"自主行动\" in npc1_status and npc1_outer and npc1_outer.strip():\n\
+          \        behind_scenes.append(f\"【{npc1_name}的独立行动】\\n{npc1_outer.strip()}\"\
+          )\n    if \"自主行动\" in npc2_status and npc2_outer and npc2_outer.strip():\n\
+          \        behind_scenes.append(f\"【{npc2_name}的独立行动】\\n{npc2_outer.strip()}\"\
+          )\n    if sub_story and sub_story.strip():\n        behind_scenes.append(f\"\
+          【支线剧情】\\n{sub_story.strip()}\")\n\n    if behind_scenes:\n        behind_panel\
+          \ = \"【===幕后动态（点击展开）===】\\n```text\\n\" + \"\\n\\n\".join(behind_scenes)\
+          \ + \"\\n```\\n\\n\"\n    else:\n        behind_panel = \"【===幕后动态（点击展开）===】\\\
+          n```text\\n关键NPC都在你那里，看什么看！\\n```\\n\\n\"\n\n    # ================= 3.\
+          \ 拼装完全内心戏 =================\n    inner_box = []\n    if npc1_name and npc1_inner\
+          \ and npc1_inner.strip():\n        inner_box.append(f\"【{npc1_name}的内心戏】\\\
+          n{npc1_inner.strip()}\")\n    if npc2_name and npc2_inner and npc2_inner.strip():\n\
+          \        inner_box.append(f\"【{npc2_name}的内心戏】\\n{npc2_inner.strip()}\"\
+          )\n\n    if inner_box:\n        inner_panel = \"【===完全内心戏（点击展开）===】\\n```text\\\
+          n\" + \"\\n\\n\".join(inner_box) + \"\\n```\"\n    else:\n        inner_panel\
+          \ = \"【===完全内心戏（点击展开）===】\\n```text\\n当前场景没有NPC内心活动。\\n```\"\n\n    # =================\
+          \ 4. 组装最终输出 =================\n    final_output = \"【===主线叙事===】\\n\" +\
+          \ story_text.strip() + \"\\n\\n\" + data_panel + behind_panel + inner_panel\n\
+          \n    return {\"final_output\": final_output.strip()}"
+        code_language: python3
+        outputs:
+          final_output:
+            children: null
+            type: string
+        selected: false
+        title: 输出拼装
+        type: code
+        variables:
+        - value_selector:
+          - '1790527875496'
+          - clean_text
+          value_type: string
+          variable: story_text
+        - value_selector:
+          - '1790423138007'
+          - pure_story
+          value_type: string
+          variable: sub_story
+        - value_selector:
+          - '1789696388145'
+          - focus_npc
+          value_type: string
+          variable: npc1_name
+        - value_selector:
+          - '1789695769410'
+          - npc1_updated_self
+          value_type: string
+          variable: npc1_self
+        - value_selector:
+          - '1789695769410'
+          - npc1_inner
+          value_type: string
+          variable: npc1_inner
+        - value_selector:
+          - '1789695769410'
+          - npc1_outer
+          value_type: string
+          variable: npc1_outer
+        - value_selector:
+          - '1789916969467'
+          - npc1_status
+          value_type: string
+          variable: npc1_status
+        - value_selector:
+          - '1789696388145'
+          - focus_npc2
+          value_type: string
+          variable: npc2_name
+        - value_selector:
+          - '1789700200376'
+          - npc2_updated_self
+          value_type: string
+          variable: npc2_self
+        - value_selector:
+          - '1789700200376'
+          - npc2_inner
+          value_type: string
+          variable: npc2_inner
+        - value_selector:
+          - '1789700200376'
+          - npc2_outer
+          value_type: string
+          variable: npc2_outer
+        - value_selector:
+          - '1789916969467'
+          - npc2_status
+          value_type: string
+          variable: npc2_status
+      height: 51
+      id: '1789873890948'
+      position:
+        x: 5596.862069361218
+        y: 852.85232418117
+      positionAbsolute:
+        x: 5596.862069361218
+        y: 852.85232418117
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import re\n\ndef main(npc2_name: str, npc2_outer: str, player_area_status:\
+          \ str) -> dict:\n    \n    # 1. 判断本轮两人是否在一个场景\n    is_together = \"玩家与多人\"\
+          \ in player_area_status or \"玩家独处（他人同行）\" in player_area_status\n    if\
+          \ not is_together or not npc2_outer or not npc2_outer.strip():\n       \
+          \ return {\"merged_outer\": \"\"}\n        \n    # 2. 按【标签】进行切割，而不是按行切割\n\
+          \    # 这一步极其关键，可以完美处理“【全局可见】动作A 【个人隐秘】动作B”写在同一行的情况\n    parts = re.split(r'(【.*?】)',\
+          \ npc2_outer)\n    valid_parts = []\n    current_label = \"\"\n    \n  \
+          \  for part in parts:\n        if part in [\"【全局可见】\", \"【玩家不知晓】\", \"【其他角色不知晓】\"\
+          , \"【个人隐秘】\"]:\n            current_label = part\n        elif part.strip():\n\
+          \            # 核心过滤逻辑：只保留“全局可见”和“玩家不知晓”的内容\n            if current_label\
+          \ in [\"【全局可见】\", \"【玩家不知晓】\"]:\n                valid_parts.append(part.strip())\n\
+          \                \n    # 3. 如果过滤完后没有任何内容了，也返回空\n    if not valid_parts:\n\
+          \        return {\"merged_outer\": \"\"}\n        \n    # 4. 拼接过滤后的动作，加上名字锚点，存入上一轮历史\n\
+          \    visible_text = \" \".join(valid_parts).strip()\n    name2 = npc2_name\
+          \ if npc2_name else \"某个NPC\"\n    merged_text = f\"【{name2} 的动作】\\n{visible_text}\"\
+          \n    \n    return {\"merged_outer\": merged_text}"
+        code_language: python3
+        outputs:
+          merged_outer:
+            children: null
+            type: string
+        selected: false
+        title: 合并NPC动作
+        type: code
+        variables:
+        - value_selector:
+          - '1789696388145'
+          - focus_npc2
+          value_type: string
+          variable: npc2_name
+        - value_selector:
+          - '1789700200376'
+          - npc2_outer
+          value_type: string
+          variable: npc2_outer
+        - value_selector:
+          - '1789696388145'
+          - player_area_status
+          value_type: string
+          variable: player_area_status
+      height: 51
+      id: '1789915252542'
+      position:
+        x: 3152.4225064063
+        y: 451.3967174330608
+      positionAbsolute:
+        x: 3152.4225064063
+        y: 451.3967174330608
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\nimport re\n\ndef main(focus_npc: str, focus_npc2: str,\
+          \ player_area_status: str, last_events: str, current_env: str, npc_database:\
+          \ str, mem_location_db: str) -> dict:\n    # 1. 解析数据库\n    db_dict = {}\n\
+          \    if npc_database and npc_database.strip():\n        try:\n         \
+          \   db_dict = json.loads(npc_database)\n        except:\n            db_dict\
+          \ = {}\n\n    def get_npc_info(npc_name):\n        if not npc_name or npc_name\
+          \ not in db_dict:\n            return \"{}\"\n        return json.dumps(db_dict[npc_name],\
+          \ ensure_ascii=False, indent=2)\n\n    # 2. 从外部客观环境中精准提取当前时间\n    current_time\
+          \ = \"未知时间\"\n    if current_env and current_env.strip():\n        match\
+          \ = re.search(r'^\\[(.*?)\\s*\\|', current_env)\n        if match:\n   \
+          \         current_time = match.group(1).strip()\n        else:\n       \
+          \     first_line = current_env.strip().split('\\n')[0]\n            if '['\
+          \ in first_line and ']' in first_line:\n                current_time = first_line[first_line.find('[')+1:first_line.find(']')].split('|')[0].strip()\n\
+          \n    # 3. 提取上一轮最后行动者的名字\n    last_action_name = \"\"\n    if last_events:\n\
+          \        match = re.search(r'【(.*?) 的动作】', last_events)\n        if match:\n\
+          \            last_action_name = match.group(1)\n\n    # 4. 决定环境、地点库、状态的打包策略\n\
+          \    env_for_npc1 = \"\"\n    env_for_npc2 = \"\"\n    loc_db_for_npc1 =\
+          \ \"\"\n    loc_db_for_npc2 = \"\"\n    status_for_npc1 = \"自主行动\"\n   \
+          \ status_for_npc2 = \"自主行动\"\n\n    # 玩家独处状态\n    if \"玩家独处\" in player_area_status:\n\
+          \        env_for_npc1 = \"\"\n        env_for_npc2 = \"\"\n        \n  \
+          \      if \"他人同行\" in player_area_status:\n            status_for_npc1 =\
+          \ \"他人同行\"\n            status_for_npc2 = \"他人同行\"\n            loc_db_for_npc1\
+          \ = mem_location_db\n            loc_db_for_npc2 = \"\"\n        else:\n\
+          \            status_for_npc1 = \"自主行动\"\n            status_for_npc2 = \"\
+          自主行动\"\n            loc_db_for_npc1 = mem_location_db\n            loc_db_for_npc2\
+          \ = mem_location_db\n\n    # 玩家与一人状态\n    elif \"玩家与一人\" in player_area_status:\n\
+          \        match = re.search(r'玩家与一人[（\\(](.*?)[）\\)]', player_area_status)\n\
+          \        if match:\n            target_name = match.group(1).strip()\n \
+          \           if target_name == focus_npc:\n                env_for_npc1 =\
+          \ current_env\n                status_for_npc1 = \"与玩家一起\"\n           \
+          \ elif target_name == focus_npc2:\n                env_for_npc2 = current_env\n\
+          \                status_for_npc2 = \"与玩家一起\"\n            else:\n      \
+          \          env_for_npc1 = current_env\n                status_for_npc1 =\
+          \ \"与玩家一起\"\n        else:\n            env_for_npc1 = current_env\n   \
+          \         status_for_npc1 = \"与玩家一起\"\n\n    # 玩家与两人/多人状态\n    elif \"玩家与多人\"\
+          \ in player_area_status or \"玩家与两人\" in player_area_status:\n        env_for_npc1\
+          \ = current_env\n        env_for_npc2 = current_env\n        status_for_npc1\
+          \ = \"与玩家一起\"\n        status_for_npc2 = \"与玩家一起\"\n\n    # 5. 决定上一轮历史的分发\n\
+          \    last_action_for_npc1 = \"\"\n    last_action_for_npc2 = \"\"\n    if\
+          \ last_events and last_events.strip():\n        if last_action_name and\
+          \ last_action_name != focus_npc:\n            last_action_for_npc1 = last_events\n\
+          \        if last_action_name and last_action_name != focus_npc2:\n     \
+          \       last_action_for_npc2 = last_events\n\n    # 6. 构建最终上下文\n    def\
+          \ build_context(npc_name, env_text, loc_db_text, last_action_text, npc_status):\n\
+          \        if not npc_name:\n            return \"该槽位无NPC，请直接跳过。\"\n     \
+          \   \n        ctx = f\"你扮演的角色是：{npc_name}\\n\"\n        ctx += f\"你当前的状态是：{npc_status}\\\
+          n\"\n        ctx += f\"当前世界时间：{current_time}\\n\\n\"\n        ctx += f\"\
+          【你的个人存档数据（静态与动态）】：\\n{get_npc_info(npc_name)}\\n\"\n        \n        if\
+          \ env_text:\n            ctx += f\"\\n【当前客观外部环境】：\\n{env_text}\\n\"\n  \
+          \          \n        if loc_db_text:\n            ctx += f\"\\n【已知地点环境库】（如果你要决定自己的去向，可以从以下地点中挑选，或者根据世界观自行前往库中未列出新地点）：\\\
+          n{loc_db_text}\\n\"\n            \n        if last_action_text:\n      \
+          \      ctx += f\"\\n【上一轮与你同行的NPC动作（你亲眼看到的客观事实）】：\\n{last_action_text}\\\
+          n\"\n            \n        return ctx\n\n    return {\n        \"npc1_context\"\
+          : build_context(focus_npc, env_for_npc1, loc_db_for_npc1, last_action_for_npc1,\
+          \ status_for_npc1),\n        \"npc2_context\": build_context(focus_npc2,\
+          \ env_for_npc2, loc_db_for_npc2, last_action_for_npc2, status_for_npc2),\n\
+          \        # 新增的两个独立状态输出\n        \"npc1_status\": status_for_npc1,\n    \
+          \    \"npc2_status\": status_for_npc2\n    }"
+        code_language: python3
+        outputs:
+          npc1_context:
+            children: null
+            type: string
+          npc1_status:
+            children: null
+            type: string
+          npc2_context:
+            children: null
+            type: string
+          npc2_status:
+            children: null
+            type: string
+        selected: false
+        title: NPC上下文分发器
+        type: code
+        variables:
+        - value_selector:
+          - '1789696388145'
+          - focus_npc
+          value_type: string
+          variable: focus_npc
+        - value_selector:
+          - '1789696388145'
+          - focus_npc2
+          value_type: string
+          variable: focus_npc2
+        - value_selector:
+          - '1789696388145'
+          - player_area_status
+          value_type: string
+          variable: player_area_status
+        - value_selector:
+          - conversation
+          - mem_last_round_events
+          value_type: string
+          variable: last_events
+        - value_selector:
+          - conversation
+          - mem_current_env
+          value_type: string
+          variable: current_env
+        - value_selector:
+          - conversation
+          - mem_npc_database
+          value_type: string
+          variable: npc_database
+        - value_selector:
+          - conversation
+          - mem_location_db
+          value_type: string
+          variable: mem_location_db
+      height: 51
+      id: '1789916969467'
+      position:
+        x: 1745.999469056779
+        y: 406.46814830008213
+      positionAbsolute:
+        x: 1745.999469056779
+        y: 406.46814830008213
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\nimport re\n\ndef main(npc1_name: str, npc1_outer: str,\
+          \ player_area_status: str, npc1_updated_self: str) -> dict:\n    \n    #\
+          \ 1. 状态判断：只有“玩家与多人”或“玩家独处（他人同行）”才需要传递\n    is_together = \"玩家与多人\" in player_area_status\
+          \ or \"玩家独处（他人同行）\" in player_area_status\n    if not is_together:\n   \
+          \     return {\"npc1_action_for_npc2\": \"\"}\n\n    # 2. 过滤 NPC1 的外部表现\n\
+          \    visible_text = \"\"\n    if npc1_outer and npc1_outer.strip():\n  \
+          \      # 核心修复：按【标签】进行切割和过滤，完美处理同一行多标签\n        parts = re.split(r'(【.*?】)',\
+          \ npc1_outer)\n        valid_parts = []\n        current_label = \"\"\n\
+          \        \n        for part in parts:\n            if part in [\"【全局可见】\"\
+          , \"【玩家不知晓】\", \"【其他角色不知晓】\", \"【个人隐秘】\"]:\n                current_label\
+          \ = part\n            elif part.strip():\n                if current_label\
+          \ in [\"【全局可见】\", \"【玩家不知晓】\"]:\n                    valid_parts.append(part.strip())\n\
+          \                    \n        visible_text = \" \".join(valid_parts).strip()\n\
+          \n    # 3. 如果没有可见动作，直接返回空\n    if not visible_text:\n        return {\"\
+          npc1_action_for_npc2\": \"\"}\n\n    # 4. 打包逻辑：根据状态决定是否把“时空”融合进去\n    if\
+          \ \"玩家独处（他人同行）\" in player_area_status and npc1_updated_self and npc1_updated_self.strip()\
+          \ != \"{}\":\n        try:\n            data = json.loads(npc1_updated_self)\n\
+          \            sync_time_space = data.get(\"当前时空\", \"\")\n            # 如果有精准的时空，就把它和动作打包在一起，加上明确的解释\n\
+          \            if sync_time_space:\n                action_text = f\"【本轮与你同行的\
+          \ {npc1_name} 刚刚做了什么（他当前所在地点：{sync_time_space}）】\\n{visible_text}\"\n  \
+          \              return {\"npc1_action_for_npc2\": action_text}\n        except:\n\
+          \            pass\n\n    # 5. 正常打包（只包含动作，用于“玩家与多人”状态）\n    action_text =\
+          \ f\"【本轮与你同行的 {npc1_name} 刚刚做了什么】\\n{visible_text}\"\n    return {\"npc1_action_for_npc2\"\
+          : action_text}"
+        code_language: python3
+        outputs:
+          npc1_action_for_npc2:
+            children: null
+            type: string
+        selected: false
+        title: NPC1动作传递
+        type: code
+        variables:
+        - value_selector:
+          - '1789696388145'
+          - focus_npc
+          value_type: string
+          variable: npc1_name
+        - value_selector:
+          - '1789695769410'
+          - npc1_outer
+          value_type: string
+          variable: npc1_outer
+        - value_selector:
+          - '1789696388145'
+          - player_area_status
+          value_type: string
+          variable: player_area_status
+        - value_selector:
+          - '1789695769410'
+          - npc1_updated_self
+          value_type: string
+          variable: npc1_updated_self
+      height: 51
+      id: '1789924889450'
+      position:
+        x: 2272.3291294105697
+        y: 755.2591838945657
+      positionAbsolute:
+        x: 2272.3291294105697
+        y: 755.2591838945657
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import re\n\ndef main(focus_npc: str, npc1_inner: str, npc1_outer:\
+          \ str, focus_npc2: str, npc2_inner: str, npc2_outer: str, player_area_status:\
+          \ str) -> dict:\n    main_parts = []\n    sub_parts = []\n    \n    # 1.\
+          \ 解析玩家区域状态\n    is_player_alone = \"玩家独处\" in player_area_status\n    is_npcs_together\
+          \ = \"他人同行\" in player_area_status\n    \n    # 2. 处理玩家独处的情况\n    if is_player_alone:\n\
+          \        if is_npcs_together:\n            # 特殊支线：把两个不在场的NPC动作打包给支线AI\n\
+          \            if focus_npc and (npc1_inner or npc1_outer):\n            \
+          \    sub_parts.append(f\"【NPC：{focus_npc}】\\n内心：{npc1_inner.strip()}\\n外部：{npc1_outer.strip()}\"\
+          )\n            if focus_npc2 and (npc2_inner or npc2_outer):\n         \
+          \       sub_parts.append(f\"【NPC：{focus_npc2}】\\n内心：{npc2_inner.strip()}\\\
+          n外部：{npc2_outer.strip()}\")\n        return {\n            \"narrative_npc_data\"\
+          : \"\",\n            \"sub_narrative_data\": \"\\n\\n\".join(sub_parts)\n\
+          \        }\n    \n    # 3. 处理玩家与一人/两人的情况\n    if \"玩家与一人\" in player_area_status:\n\
+          \        # 提取括号里的目标NPC名字（兼容中英文括号）\n        match = re.search(r'玩家与一人[（\\\
+          (](.*?)[）\\)]', player_area_status)\n        target_name = match.group(1).strip()\
+          \ if match else \"\"\n        \n        # 精准投喂：只打包对应目标的数据\n        if target_name\
+          \ == focus_npc and (npc1_inner or npc1_outer):\n            main_parts.append(f\"\
+          【第一顺位NPC：{focus_npc}】\\n内心：{npc1_inner.strip()}\\n外部：{npc1_outer.strip()}\"\
+          )\n        elif target_name == focus_npc2 and (npc2_inner or npc2_outer):\n\
+          \            main_parts.append(f\"【第一顺位NPC：{focus_npc2}】\\n内心：{npc2_inner.strip()}\\\
+          n外部：{npc2_outer.strip()}\")\n        else:\n            # 兜底：如果名字没对上，默认打包第一顺位NPC的数据，防止叙事AI空转\n\
+          \            if focus_npc and (npc1_inner or npc1_outer):\n            \
+          \    main_parts.append(f\"【第一顺位NPC：{focus_npc}】\\n内心：{npc1_inner.strip()}\\\
+          n外部：{npc1_outer.strip()}\")\n                \n    elif \"玩家与多人\" in player_area_status\
+          \ or \"玩家与两人\" in player_area_status:\n        # 都在场，按顺序打包两人\n        if\
+          \ focus_npc and (npc1_inner or npc1_outer):\n            main_parts.append(f\"\
+          【第一顺位NPC：{focus_npc}】\\n内心：{npc1_inner.strip()}\\n外部：{npc1_outer.strip()}\"\
+          )\n        if focus_npc2 and (npc2_inner or npc2_outer):\n            main_parts.append(f\"\
+          【第二顺位NPC：{focus_npc2}】\\n内心：{npc2_inner.strip()}\\n外部：{npc2_outer.strip()}\"\
+          )\n\n    # 4. 返回结果\n    if not main_parts:\n        return {\"narrative_npc_data\"\
+          : \"\", \"sub_narrative_data\": \"\\n\\n\".join(sub_parts)}\n        \n\
+          \    return {\n        \"narrative_npc_data\": \"\\n\\n\".join(main_parts),\n\
+          \        \"sub_narrative_data\": \"\\n\\n\".join(sub_parts)\n    }"
+        code_language: python3
+        outputs:
+          narrative_npc_data:
+            children: null
+            type: string
+          sub_narrative_data:
+            children: null
+            type: string
+        selected: false
+        title: NPC过滤器
+        type: code
+        variables:
+        - value_selector:
+          - '1789696388145'
+          - focus_npc
+          value_type: string
+          variable: focus_npc
+        - value_selector:
+          - '1789695769410'
+          - npc1_inner
+          value_type: string
+          variable: npc1_inner
+        - value_selector:
+          - '1789695769410'
+          - npc1_outer
+          value_type: string
+          variable: npc1_outer
+        - value_selector:
+          - '1789696388145'
+          - focus_npc2
+          value_type: string
+          variable: focus_npc2
+        - value_selector:
+          - '1789700200376'
+          - npc2_inner
+          value_type: string
+          variable: npc2_inner
+        - value_selector:
+          - '1789700200376'
+          - npc2_outer
+          value_type: string
+          variable: npc2_outer
+        - value_selector:
+          - '1789696388145'
+          - player_area_status
+          value_type: string
+          variable: player_area_status
+      height: 51
+      id: '1789965095161'
+      position:
+        x: 3730.439213343686
+        y: 683.3799646896294
+      positionAbsolute:
+        x: 3730.439213343686
+        y: 683.3799646896294
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            response_format: json_object
+            temperature: 0.6
+            thinking: false
+          mode: chat
+          name: deepseek-flash
+          provider: langgenius/deepseek/deepseek
+        model_selector: null
+        prompt_template:
+        - id: 8008f274-d26a-4f3f-b4e0-f76a4a4e7559
+          role: system
+          text: "你是这个世界引擎的“幕后导播”，专门负责记录玩家看不到的支线剧情。\n你的任务需要分两步完成：第一，评估当前地点的静态环境；第二，结合NPC动态生成叙事。\n\
+            \n【输入信息】\n1. 世界背景：{{#conversation.mem_world_view#}}\n2. 当前时间：{{#1790420750939.time_str#}}\n\
+            3. 当前地点：{{#1790420750939.loc_name#}}\n4. 当前基础环境描述（可能为空，如果不为空你必须进行环境沿用）：\n\
+            {{#1790420750939.base_env#}}\n5. 本轮NPC动态（按行动顺序排好）：\n{{#1789965095161.sub_narrative_data#}}\n\
+            \n【任务要求】\n1. 【第一步：生成静态环境（base_env）】\n   - 如果【当前基础环境描述】有内容， `base_env`\
+            \ 字段则无需填写。\n   - 如果【当前基础环境描述】为空，请基于世界观和当前地点，生成一段【绝对不包含任何NPC、玩家及其动作痕迹的纯粹宏观物理布景】（例如：茶馆内光线昏暗，几张破旧的木桌摆放着，空气中弥漫着劣质茶叶的气味）。\n\
+            \   - 绝对不要把NPC的任何动作、话语或互动写进环境里！环境只是空荡荡的舞台布景！\n2. 【第二步：生成叙事（story）】\n \
+            \  - 严格按照NPC动态里的顺位顺序，描写他们之间的互动。\n   - 如果系统提供了基础环境，你必须在叙事中自然地运用该环境作为背景。\n\
+            \   - 如果系统未提供，请使用你刚刚在第一步生成的 base_env 作为背景。\n   - 叙事必须客观，绝对不能编造NPC的行动！他们说了什么、做了什么，必须完全遵守输入数据。\n\
+            \   - 正文第一行必须带上时间地点锚点，格式为：`【当前：时间｜地点】`。\n   - 结尾留白建立在NPC互动或当前环境上即可。\n\
+            \   - 绝对不能出现“玩家”、“系统”、“NPC1”等词汇，必须使用真实姓名。\n\n【严格输出格式】（请直接输出纯 JSON，不要包含任何解释或\
+            \ Markdown 标记）：\n{\n  \"base_env\": \"你评估或提取出的静态环境描述（不含任何人物痕迹）\",\n  \"\
+            story\": \"【当前：时间｜地点】\\n[包含NPC互动的完整叙事文本]\"\n}"
+        selected: false
+        title: 支线叙事
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1790411478990'
+      position:
+        x: 4352.746855149365
+        y: 637.112038559845
+      positionAbsolute:
+        x: 4352.746855149365
+        y: 637.112038559845
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        cases:
+        - case_id: 'true'
+          conditions:
+          - comparison_operator: not empty
+            id: 36fb9aac-d5c3-4d93-bebc-de4b09a4a0b1
+            value: ''
+            varType: string
+            variable_selector:
+            - '1789965095161'
+            - sub_narrative_data
+          logical_operator: and
+        selected: false
+        title: 条件分支 2
+        type: if-else
+      height: 139
+      id: '1790419622655'
+      position:
+        x: 3997.545860697308
+        y: 711.044422256715
+      positionAbsolute:
+        x: 3997.545860697308
+        y: 711.044422256715
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\nimport re\n\ndef main(sub_narrative_data: str, mem_npc_database:\
+          \ str, mem_location_db: str) -> dict:\n    # 1. 提取支线数据里提到的所有NPC名字\n    npc_names\
+          \ = re.findall(r'【NPC：(.*?)】', sub_narrative_data)\n    db_dict = json.loads(mem_npc_database)\
+          \ if mem_npc_database and mem_npc_database.strip() else {}\n    loc_dict\
+          \ = json.loads(mem_location_db) if mem_location_db and mem_location_db.strip()\
+          \ else {}\n    \n    time_str = \"未知时间\"\n    loc_name = \"未知地点\"\n    \n\
+          \    # 2. 遍历所有NPC，从他们的记忆里寻找时间地点锚点\n    # 只要找到一个合法的，就直接确定，并停止寻找（因为同行状态下两人数据一致）\n\
+          \    for npc_name in npc_names:\n        if npc_name in db_dict:\n     \
+          \       memory = db_dict[npc_name].get(\"动态\", {}).get(\"记忆\", [])\n   \
+          \         if memory:\n                # 从最后一条记忆（最新的）往前推，或者只看最后一条\n     \
+          \           # 格式为：[时间 | 地点] xxx\n                match = re.search(r'\\\
+          [(.*?)\\s*\\|\\s*(.*?)\\]', memory[-1])\n                if match:\n   \
+          \                 time_str = match.group(1).strip()\n                  \
+          \  loc_name = match.group(2).strip()\n                    break  # 找到一个就跳出循环\n\
+          \    \n    # 3. 去环境库查找对应的基础环境\n    base_env = loc_dict.get(loc_name, \"\"\
+          )\n    \n    return {\n        \"time_str\": time_str,\n        \"loc_name\"\
+          : loc_name,\n        \"base_env\": base_env\n    }"
+        code_language: python3
+        outputs:
+          base_env:
+            children: null
+            type: string
+          loc_name:
+            children: null
+            type: string
+          time_str:
+            children: null
+            type: string
+        selected: false
+        title: 支线时空提取
+        type: code
+        variables:
+        - value_selector:
+          - '1789965095161'
+          - sub_narrative_data
+          value_type: string
+          variable: sub_narrative_data
+        - value_selector:
+          - conversation
+          - mem_npc_database
+          value_type: string
+          variable: mem_npc_database
+        - value_selector:
+          - conversation
+          - mem_location_db
+          value_type: string
+          variable: mem_location_db
+      height: 51
+      id: '1790420750939'
+      position:
+        x: 4062.931423327348
+        y: 610.0693801936382
+      positionAbsolute:
+        x: 4062.931423327348
+        y: 610.0693801936382
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import json\nimport re\n\ndef main(llm_output: str, loc_name: str,\
+          \ mem_location_db: str) -> dict:\n    # 初始化变量\n    pure_story = \"\"\n \
+          \   new_base_env = \"\"\n    updated_db = mem_location_db\n\n    # 1. 解析\
+          \ LLM 输出，提取 story 和 base_env\n    if llm_output and llm_output.strip():\n\
+          \        # 核心改进 1：先清理 <think> 标签，再清理 Markdown 标记\n        cleaned_text =\
+          \ re.sub(r'<think>.*?</think>', '', llm_output, flags=re.DOTALL | re.IGNORECASE).strip()\n\
+          \        cleaned_text = re.sub(r'```(json)?', '', cleaned_text, flags=re.IGNORECASE).strip()\n\
+          \        \n        # 截取大括号部分\n        start_idx = cleaned_text.find('{')\n\
+          \        end_idx = cleaned_text.rfind('}')\n        if start_idx != -1 and\
+          \ end_idx != -1:\n            cleaned_text = cleaned_text[start_idx:end_idx+1]\n\
+          \            \n        try:\n            data = json.loads(cleaned_text)\n\
+          \            pure_story = data.get(\"story\", \"\").strip()\n          \
+          \  new_base_env = data.get(\"base_env\", \"\").strip()\n        except Exception\
+          \ as e:\n            # 兜底：解析失败，把全文当故事，放弃提取环境，确保工作流不崩溃\n            pure_story\
+          \ = llm_output.strip()\n            new_base_env = \"\"\n\n    # 2. 安全更新环境库（如果有新环境）\n\
+          \    if new_base_env and loc_name and loc_name != \"未知地点\":\n        try:\n\
+          \            # 读取旧库（如果为空则初始化）\n            db = json.loads(mem_location_db)\
+          \ if mem_location_db and mem_location_db.strip() else {}\n            \n\
+          \            # 核心保护逻辑：如果地点不存在，才追加。如果已存在，绝对不覆盖！\n            if loc_name\
+          \ not in db:\n                db[loc_name] = new_base_env\n            \
+          \    \n            updated_db = json.dumps(db, ensure_ascii=False)\n   \
+          \     except Exception as e:\n            # 如果数据库解析失败，原样返回，防崩溃\n       \
+          \     updated_db = mem_location_db\n\n    return {\n        \"pure_story\"\
+          : pure_story,\n        \"updated_db\": updated_db\n    }"
+        code_language: python3
+        outputs:
+          pure_story:
+            children: null
+            type: string
+          updated_db:
+            children: null
+            type: string
+        selected: false
+        title: 支线输出解析与入库
+        type: code
+        variables:
+        - value_selector:
+          - '1790411478990'
+          - text
+          value_type: string
+          variable: llm_output
+        - value_selector:
+          - '1790420750939'
+          - loc_name
+          value_type: string
+          variable: loc_name
+        - value_selector:
+          - conversation
+          - mem_location_db
+          value_type: string
+          variable: mem_location_db
+      height: 51
+      id: '1790423138007'
+      position:
+        x: 4410.830684696299
+        y: 793.9747908666442
+      positionAbsolute:
+        x: 4410.830684696299
+        y: 793.9747908666442
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1790423138007'
+          - updated_db
+          variable_selector:
+          - conversation
+          - mem_location_db
+        selected: false
+        title: 支线环境
+        type: assigner
+        version: '2'
+      height: 83
+      id: '1790423322681'
+      position:
+        x: 4725.760278110112
+        y: 711.044422256715
+      positionAbsolute:
+        x: 4725.760278110112
+        y: 711.044422256715
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1789696388145'
+          - player_area_status
+          variable_selector:
+          - conversation
+          - mem_player_area_status
+        selected: false
+        title: 状态延续
+        type: assigner
+        version: '2'
+      height: 83
+      id: '1790527277443'
+      position:
+        x: 1733.502720252345
+        y: 213.74506951292275
+      positionAbsolute:
+        x: 1733.502720252345
+        y: 213.74506951292275
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        code: "import re\n\ndef main(llm_output: str) -> dict:\n    # 1. 清理 <think>\
+          \ 标签和 Markdown 标记\n    cleaned_text = re.sub(r'<think>.*?</think>', '',\
+          \ llm_output, flags=re.DOTALL | re.IGNORECASE).strip()\n    cleaned_text\
+          \ = re.sub(r'<details.*?</details>', '', cleaned_text, flags=re.DOTALL |\
+          \ re.IGNORECASE).strip()\n    cleaned_text = re.sub(r'<!--.*?-->', '', cleaned_text,\
+          \ flags=re.DOTALL).strip()\n    \n    return {\"clean_text\": cleaned_text}"
+        code_language: python3
+        outputs:
+          clean_text:
+            children: null
+            type: string
+        selected: false
+        title: 清理叙事
+        type: code
+        variables:
+        - value_selector:
+          - '1789701043334'
+          - text
+          value_type: string
+          variable: llm_output
+      height: 51
+      id: '1790527875496'
+      position:
+        x: 4298.626098794849
+        y: 1075.3837352476216
+      positionAbsolute:
+        x: 4298.626098794849
+        y: 1075.3837352476216
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        model:
+          completion_params:
+            response_format: json_object
+            temperature: 0.7
+            thinking: false
+          mode: chat
+          name: deepseek-flash
+          provider: langgenius/deepseek/deepseek
+        model_selector: null
+        prompt_template:
+        - id: 7465db37-63d8-4425-a3f6-e02ff4cd935b
+          role: system
+          text: "你是一个玩家档案提取器。请从下方的人设中，提取出玩家的【姓名】和【外貌】。\n如果人设中没有明确名字，请默认名字为“无名客”。\n\
+            如果人设中没有明确外貌，请默认外貌为“一个带着兜帽的旅人”。\n只输出纯JSON，不要包含任何解释或Markdown标记。\n\n【玩家的人设】：\n\
+            {{#1789649401822.player_role#}}\n\n【严格输出格式】：\n{\n  \"name\": \"玩家的名字\"\
+            ,\n  \"appearance\": \"玩家的外貌描述（50字以内）\"\n}"
+        selected: false
+        title: 玩家信息提取器
+        type: llm
+        vision:
+          enabled: false
+      height: 87
+      id: '1790729828227'
+      position:
+        x: 751.6058256052288
+        y: 131.573606337155
+      positionAbsolute:
+        x: 751.6058256052288
+        y: 131.573606337155
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        items:
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1790730093895'
+          - p_name
+          variable_selector:
+          - conversation
+          - mem_player_name
+        - input_type: variable
+          operation: over-write
+          value:
+          - '1790730093895'
+          - p_appearance
+          variable_selector:
+          - conversation
+          - mem_player_appearance
+        selected: false
+        title: 变量赋值 11
+        type: assigner
+        version: '2'
+      height: 109
+      id: '1790729998525'
+      position:
+        x: 1139.0298038143958
+        y: 85.3782950508673
+      positionAbsolute:
+        x: 1139.0298038143958
+        y: 85.3782950508673
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        code: "import json\nimport re\n\ndef main(llm_output: str) -> dict:\n    #\
+          \ 设置兜底默认值\n    name = \"无名客\"\n    appearance = \"一个带着兜帽的旅人\"\n    \n  \
+          \  try:\n        cleaned = re.sub(r'```(json)?', '', llm_output, flags=re.IGNORECASE).strip()\n\
+          \        start = cleaned.find('{')\n        end = cleaned.rfind('}')\n \
+          \       if start != -1 and end != -1:\n            cleaned = cleaned[start:end+1]\n\
+          \        data = json.loads(cleaned)\n        \n        # 提取姓名，若提取失败或为空则使用兜底\n\
+          \        extracted_name = data.get(\"name\", \"\").strip()\n        if extracted_name:\n\
+          \            name = extracted_name\n            \n        # 提取外貌，若提取失败或为空则使用兜底\n\
+          \        extracted_appearance = data.get(\"appearance\", \"\").strip()\n\
+          \        if extracted_appearance:\n            appearance = extracted_appearance\n\
+          \            \n        return {\"p_name\": name, \"p_appearance\": appearance}\n\
+          \        \n    except Exception as e:\n        # 如果整个JSON解析都失败了，直接返回兜底值\n\
+          \        return {\"p_name\": \"无名客\", \"p_appearance\": \"一个带着兜帽的旅人\"}"
+        code_language: python3
+        outputs:
+          p_appearance:
+            children: null
+            type: string
+          p_name:
+            children: null
+            type: string
+        selected: false
+        title: 解析玩家信息
+        type: code
+        variables:
+        - value_selector:
+          - '1790729828227'
+          - text
+          value_type: string
+          variable: llm_output
+      height: 51
+      id: '1790730093895'
+      position:
+        x: 988.6059019862862
+        y: 218.6485940389295
+      positionAbsolute:
+        x: 988.6059019862862
+        y: 218.6485940389295
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+    - data:
+        answer: 收到，世界观已更新存入记忆！
+        selected: false
+        title: 直接回复
+        type: answer
+        variables: []
+      height: 99
+      id: answer
+      position:
+        x: 163.1688460294863
+        y: -255.94877223056076
+      positionAbsolute:
+        x: 163.1688460294863
+        y: -255.94877223056076
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 241
+      zIndex: 0
+    viewport:
+      x: -2872.223171695285
+      y: -7.7046481145059715
+      zoom: 0.7578582832551997
+  rag_pipeline_variables: []
